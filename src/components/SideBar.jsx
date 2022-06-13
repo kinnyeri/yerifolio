@@ -11,7 +11,7 @@ const SideBarBox = styled.div`
   top: 0;
 `;
 
-const SideBar = () => {
+export const SideBar = () => {
   return (
     <SideBarBox>
       <div>Skills</div>
@@ -21,5 +21,3 @@ const SideBar = () => {
     </SideBarBox>
   );
 };
-
-export default SideBar;

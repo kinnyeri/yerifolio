@@ -5,7 +5,6 @@ const ProjectBox = styled.div`
   height: 300vh;
   background-color: blue;
 `;
-const Project = () => {
+export const Project = () => {
   return <ProjectBox>skill</ProjectBox>;
 };
-export default Project;

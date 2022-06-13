@@ -1,9 +1,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import PageWrapper from "./components/PageWrapper";
-import SideBarBox from "./components/SideBar";
-import Project from "./Project";
-import Skill from "./Skill";
+import { PageWrapper, SideBar } from "./components";
+import { Profile, Project, Skill } from "./pages";
 
 const GlobalStyles = createGlobalStyle`
   html {
@@ -14,12 +12,7 @@ const OuterPageBox = styled.div`
   height: 100vh;
   overflow-y: auto;
 `;
-const MainPageBox = styled.div`
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-itmes: center;
-`;
+
 const ContentPageBox = styled.div`
   display: flex;
 `;
@@ -28,9 +21,9 @@ function App() {
     <>
       <GlobalStyles />
       <OuterPageBox>
-        <MainPageBox></MainPageBox>
+        <Profile></Profile>
         <ContentPageBox>
-          <SideBarBox />
+          <SideBar />
           <PageWrapper>
             <Skill />
             <Project />
