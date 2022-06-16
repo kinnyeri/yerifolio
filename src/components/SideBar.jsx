@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const SideBarBox = styled.div`
   width: 20vw;
+  min-width: 150px;
   height: 100vh;
   color: black;
   background-color: var(--color-main);

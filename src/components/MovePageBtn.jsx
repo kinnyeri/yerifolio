@@ -1,17 +1,17 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faDownLong,
-  faCaretDown,
-  faCaretUp,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 export const MovePageBtn = ({ isDown }) => {
   const ProfileToContents = (
     <GoToContentBtn href="#contents">
       <FontAwesomeIcon
         icon={isDown ? faCaretDown : faCaretUp}
-        style={{ color: "#efefef", fontSize: "2rem", lineHeight: "2rem" }}
+        style={{
+          color: "var(--color-back)",
+          fontSize: "2rem",
+          lineHeight: "2rem",
+        }}
       />
     </GoToContentBtn>
   );
@@ -19,8 +19,10 @@ export const MovePageBtn = ({ isDown }) => {
 };
 
 const GoToContentBtn = styled.a`
-  width: 5vw;
-  height: 5vw;
+  width: 6vw;
+  min-width: 52px;
+  height: 6vw;
+  min-height: 52px;
   border-radius: 100%;
 
   position: fixed;

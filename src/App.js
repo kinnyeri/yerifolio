@@ -3,20 +3,6 @@ import styled, { createGlobalStyle } from "styled-components";
 import { MovePageBtn, PageWrapper, SideBar } from "./components";
 import { Profile, Project, Skill } from "./pages";
 
-const GlobalStyles = createGlobalStyle`
-  html {
-    --color-main: #BCAFD4;
-    --color-back: #efefef;
-  }
-`;
-const OuterPageBox = styled.div`
-  height: 100vh;
-  overflow-y: auto;
-`;
-
-const ContentPageBox = styled.div`
-  display: flex;
-`;
 function App() {
   const OuterPageBoxRef = useRef();
   const [isDown, setIsDown] = useState(true);
@@ -48,10 +34,24 @@ function App() {
             <Project />
           </PageWrapper>
         </ContentPageBox>
-        <MovePageBtn isDown={isDown} />
+        <MovePageBtn isDown={isDown} OuterPageBoxRef={OuterPageBoxRef} />
       </OuterPageBox>
     </>
   );
 }
 
+const GlobalStyles = createGlobalStyle`
+  html {
+    --color-main: #BCAFD4;
+    --color-back: #efefef;
+  }
+`;
+const OuterPageBox = styled.div`
+  height: 100vh;
+  overflow-y: auto;
+`;
+
+const ContentPageBox = styled.div`
+  display: flex;
+`;
 export default App;
