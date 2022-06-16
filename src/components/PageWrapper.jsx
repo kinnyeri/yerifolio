@@ -5,8 +5,6 @@ const PageWrapperBox = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const PageWrapper = ({ children }) => {
+export const PageWrapper = ({ children }) => {
   return <PageWrapperBox>{children}</PageWrapperBox>;
 };
-
-export default PageWrapper;

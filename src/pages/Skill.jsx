@@ -5,7 +5,6 @@ const SkillBox = styled.div`
   height: 100vh;
   background-color: yellow;
 `;
-const Skill = () => {
+export const Skill = () => {
   return <SkillBox>skill</SkillBox>;
 };
-export default Skill;
