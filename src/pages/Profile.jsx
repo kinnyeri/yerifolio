@@ -1,7 +1,37 @@
 import styled, { keyframes } from "styled-components";
+const ContactBox = styled.div`
+  width: 8vw;
+  min-width: 70px;
+  height: 22vw;
+  min-height: 190px;
+
+  left: 118px;
+  top: 99px;
+  position: fixed;
+  border-radius: 8vw;
+
+  top: 7vh;
+  left: 7vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-main);
+`;
+const ContactButton = styled.div`
+  width: 7vw;
+  min-width: 50px;
+  heigth: 7vw;
+  min-height: 50px;
+  background: #f4f4f4;
+`;
+const Contact = () => {
+  return <ContactBox></ContactBox>;
+};
 export const Profile = () => {
   return (
     <ProfilBox>
+      <Contact />
       <ContentBox>
         <ProfileImgBox>
           <img src="/myprofile.jpg" alt="프로필 이미지" />
@@ -57,7 +87,9 @@ const ContentBox = styled.div`
 `;
 const ProfileImgBox = styled.div`
   width: 20vw;
+  min-width: 200px;
   height: 20vw;
+  min-height: 200px;
   border-radius: 100%;
   overflow: hidden;
 
@@ -68,14 +100,14 @@ const ProfileImgBox = styled.div`
   animation: ${ContentUp} 0.3s 1 ease-in normal;
 `;
 const TitleBox = styled.div`
-  font-size: 70px;
-  line-height: 75px;
+  font-size: 5rem;
+  line-height: 5rem;
   text-align: center;
 
   animation: ${ContentUp} 0.5s 1 ease-in normal;
 `;
 const SubTitleBox = styled.div`
-  font-size: 22px;
+  font-size: 1.3rem;
   text-align: center;
 
   animation: ${ContentUp} 0.8s 1 ease-in normal;
