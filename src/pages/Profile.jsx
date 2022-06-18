@@ -29,7 +29,10 @@ export const Profile = () => {
         <TitleBox>
           문제 해결이
           <br />
-          <span>즐거운</span> <HighLight>김예리</HighLight>
+          <span>즐거운</span>{" "}
+          <HighLight>
+            <NameBox>김예리</NameBox>
+          </HighLight>
           <span>입니다</span>
         </TitleBox>
         <SubTitleBox>
@@ -51,6 +54,22 @@ const ProfilBox = styled.div`
   align-items: center;
 
   position: relative; /* contact box 고정시키기위해서 */
+`;
+// 이름 애니메이션
+const letterspacing = keyframes`
+  0% {
+    letter-spacing: -5rem;
+    filter: blur(0.5rem);
+    color:var(--color-main);
+  }
+
+  50% {
+    filter: blur(0.3rem);
+  }
+`;
+const NameBox = styled.div`
+  animation: ${letterspacing} 2s alternate cubic-bezier(0.2, 0, 0, 1);
+  display: block;
 `;
 const contentUpAnimation = keyframes`
   0% {
