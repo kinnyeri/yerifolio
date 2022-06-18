@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const SideBarBox = styled.div`
-  width: 20vw;
   min-width: 150px;
   height: 100vh;
   color: black;
@@ -10,6 +9,10 @@ const SideBarBox = styled.div`
 
   position: sticky;
   top: 0;
+
+  @media screen and (max-width: 682px) {
+    display: none;
+  }
 `;
 
 export const SideBar = () => {

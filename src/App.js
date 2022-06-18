@@ -52,6 +52,10 @@ const OuterPageBox = styled.div`
 `;
 
 const ContentPageBox = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  @media screen and (max-width: 682px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export default App;
