@@ -44,6 +44,8 @@ const GlobalStyles = createGlobalStyle`
   html {
     --color-main: #BCAFD4;
     --color-back: #efefef;
+    --color-back-light: #F9F9F9;
+    --color-detail-back : #f4f4f4;
   }
 `;
 const OuterPageBox = styled.div`

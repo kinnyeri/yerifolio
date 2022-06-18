@@ -24,7 +24,7 @@ export const DetailContainer = ({ title, content }) => {
 };
 const Container = styled.div`
   width: 80%;
-  background: #f4f4f4;
+  background: var(--color-detail-back);
   border: 1px solid var(--color-main);
 `;
 const TitleContainer = styled.div`
@@ -39,5 +39,5 @@ const TitleBox = styled.span`
 `;
 
 const ContentContainer = styled.div`
-  padding: 0 20px 20px 33px;
+  padding: 0 20px 20px 50px;
 `;

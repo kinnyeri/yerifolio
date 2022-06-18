@@ -16,13 +16,14 @@ export const PageWrapper = ({ icon, title, children }) => {
 const PageContainer = styled.div`
   width: 100%;
   min-height: 100vh;
+  margin-bottom: 5vh;
   display: grid;
   grid-template-rows: 90px auto;
 `;
 
 const PageTitleContainer = styled.div`
   display: flex;
-  gap: 5px;
+  gap: 8px;
   align-items: center;
   font-size: 40px;
   line-height: 40px;

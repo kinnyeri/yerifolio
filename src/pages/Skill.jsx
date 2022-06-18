@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { DetailContainer, PageWrapper } from "../components";
 import { PROFILE } from "../data";
 const SkillBox = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
