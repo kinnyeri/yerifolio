@@ -3,12 +3,9 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-export const DetailContainer = () => {
+export const DetailContainer = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const data = {
-    title: "JavaScript",
-    content: "클로저 개념을 명확히 압니다.",
-  };
+
   const handleClick = () => {
     console.log("click");
     setIsOpen(!isOpen);
@@ -19,9 +16,9 @@ export const DetailContainer = () => {
         <IconBox>
           <FontAwesomeIcon icon={faCircleChevronDown} />
         </IconBox>
-        <TitleBox>{data.title}</TitleBox>
+        <TitleBox>{title}</TitleBox>
       </TitleContainer>
-      {isOpen && <ContentContainer>{data.content}</ContentContainer>}
+      {isOpen && <ContentContainer>{content}</ContentContainer>}
     </Container>
   );
 };
@@ -31,16 +28,16 @@ const Container = styled.div`
   border: 1px solid var(--color-main);
 `;
 const TitleContainer = styled.div`
-  padding: 5px;
+  padding: 20px;
+  font-size: 20px;
 `;
 const IconBox = styled.span`
   color: var(--color-main);
 `;
 const TitleBox = styled.span`
-  margin-left: 10px;
+  margin-left: 15px;
 `;
 
 const ContentContainer = styled.div`
-  padding: 5px;
-  padding-left: 30px;
+  padding: 0 20px 20px 33px;
 `;

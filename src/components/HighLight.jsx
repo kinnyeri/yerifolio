@@ -11,7 +11,7 @@ export const HighLight = ({ children }) => {
 
 const HightLightBox = styled.div`
   display: inline-block;
-  width: fit-content;
+  min-width: fit-content;
 `;
 
 const HighLighter = styled.div`

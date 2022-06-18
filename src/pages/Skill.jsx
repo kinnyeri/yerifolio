@@ -1,14 +1,21 @@
 import styled from "styled-components";
-import { DetailContainer } from "../components";
+import { DetailContainer, PageWrapper } from "../components";
+import { PROFILE } from "../data";
 const SkillBox = styled.div`
-  width: 100%;
-  height: 100vh;
-  background-color: yellow;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 `;
 export const Skill = () => {
   return (
-    <SkillBox>
-      <DetailContainer></DetailContainer>
-    </SkillBox>
+    <PageWrapper icon="📚" title="Skills">
+      <SkillBox>
+        {PROFILE.skills.map((data) => (
+          <DetailContainer key={data.title} {...data}></DetailContainer>
+        ))}
+      </SkillBox>
+    </PageWrapper>
   );
 };
