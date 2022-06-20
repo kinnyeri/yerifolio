@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleChevronDown,
+  faCircleChevronUp,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const DetailContainer = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +17,9 @@ export const DetailContainer = ({ title, content }) => {
     <Container onClick={handleClick}>
       <TitleContainer>
         <IconBox>
-          <FontAwesomeIcon icon={faCircleChevronDown} />
+          <FontAwesomeIcon
+            icon={isOpen ? faCircleChevronUp : faCircleChevronDown}
+          />
         </IconBox>
         <TitleBox>{title}</TitleBox>
       </TitleContainer>
