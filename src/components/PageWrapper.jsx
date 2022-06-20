@@ -1,13 +1,10 @@
 import styled from "styled-components";
-import { HighLight } from "./HighLight";
 export const PageWrapper = ({ icon, title, children }) => {
   return (
     <PageContainer>
       <PageTitleContainer>
         <PageTitleIconBox>{icon}</PageTitleIconBox>
-        <PageTitleBox>
-          <HighLight>{title}</HighLight>
-        </PageTitleBox>
+        <PageTitleBox>{title}</PageTitleBox>
       </PageTitleContainer>
       <PageContentBox>{children}</PageContentBox>
     </PageContainer>
@@ -19,6 +16,7 @@ const PageContainer = styled.div`
   display: grid;
   grid-template-rows: 90px auto;
   overflow-y: hidden;
+  border-top: 2vh solid var(--color-main-dark);
 `;
 
 const PageTitleContainer = styled.div`

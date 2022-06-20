@@ -18,7 +18,8 @@ const PROFILE = {
   ],
   projects: [
     {
-      title: "Collector's : 수많은 사람들의 상상을 실현시켜줄 수 있는 쇼핑몰",
+      title: "Collector's",
+      subTitle: "수많은 사람들의 상상을 실현시켜줄 수 있는 쇼핑몰",
       time: "2022.5.11-27",
       team: "팀 프로젝트 (FE 2명, BE 2명)",
       details: [
@@ -44,7 +45,8 @@ const PROFILE = {
       ],
     },
     {
-      title: "GBTI : 나만의 MBTI 결과를 받아보자",
+      title: "GBTI",
+      subTitle: "나만의 MBTI 결과를 받아보자",
       time: "2022.1-3",
       team: "팀 프로젝트 (FE 2명, 디자이너 1명)",
       details: [
@@ -63,6 +65,30 @@ const PROFILE = {
           title: "Konva",
           content:
             "리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.",
+        },
+      ],
+    },
+  ],
+  educations: [
+    {
+      title: "숭실대학교",
+      details: [
+        {
+          icon: "전공",
+          content: "글로벌미디어학부 2018.02 - 2022.08 (졸업 예정)",
+        },
+        { icon: "학점", content: "4.17/4.5" },
+      ],
+    },
+    {
+      title: "엘리스 SW 엔지니어 트랙 2기",
+      details: [
+        { icon: "⏱", content: "2022.04 - 2022.07" },
+        { icon: "➿", content: "풀스택 기반 4달 교육" },
+        {
+          icon: "🔗",
+          content: "관련 포스팅",
+          link: "",
         },
       ],
     },
