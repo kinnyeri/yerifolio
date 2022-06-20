@@ -56,7 +56,7 @@ const TitleBox = styled.div`
   line-height: 40px;
 `;
 const DetailsContainer = styled.div`
-  padding-left: 20px;
+  padding-left: 1vw;
   display: flex;
   flex-direction: column;
   gap: 5px;

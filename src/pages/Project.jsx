@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { HighLight, PageWrapper, DetailDropdown } from "../components";
 import { PROFILE } from "../data";
-const Content = ({ title, time, team, details, links, stacks }) => {
+const Content = ({ title, subTitle, time, team, details, links, stacks }) => {
   return (
     <ContentContainer>
       <TitleBox>
         <HighLight>{title}</HighLight>
       </TitleBox>
+      {subTitle && <SubTitleBox>{subTitle}</SubTitleBox>}
       <DetailsContainer>
         <DetailContainer>
           <IconBox>⏱</IconBox>
@@ -82,11 +83,15 @@ const ContentContainer = styled.div`
   gap: 20px;
 `;
 const TitleBox = styled.div`
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 2rem;
+  line-height: 2rem;
+`;
+const SubTitleBox = styled.div`
+  font-size: 1.2rem;
+  line-height: 1.2rem;
 `;
 const DetailsContainer = styled.div`
-  padding-left: 20px;
+  padding-left: 1vw;
   display: flex;
   flex-direction: column;
   gap: 5px;
