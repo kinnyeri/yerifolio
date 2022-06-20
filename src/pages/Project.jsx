@@ -110,8 +110,4 @@ const DetailBox = styled.div`
   flex-direction: column;
   gap: 5px;
 `;
-const Detail = styled.div`
-  & > a {
-    color: var(--color-main-dark);
-  }
-`;
+const Detail = styled.div``;

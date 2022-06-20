@@ -12,7 +12,7 @@ export const PageWrapper = ({ icon, title, children }) => {
 };
 const PageContainer = styled.div`
   width: 100%;
-  margin-bottom: 5vh;
+  margin-bottom: 50px;
   display: grid;
   grid-template-rows: 90px auto;
   overflow-y: hidden;

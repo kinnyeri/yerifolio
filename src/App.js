@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import { MovePageBtn, ContentsWrapper, SideBar } from "./components";
+import { MovePageBtn, ContentsWrapper, SideBar, Footer } from "./components";
 import { Profile, Project, Skill, Education } from "./pages";
 
 function App() {
@@ -36,6 +36,7 @@ function App() {
           </ContentsWrapper>
         </ContentPageBox>
         <MovePageBtn isDown={isDown} OuterPageBoxRef={OuterPageBoxRef} />
+        <Footer />
       </OuterPageBox>
     </>
   );
@@ -48,6 +49,9 @@ const GlobalStyles = createGlobalStyle`
     --color-back: #efefef;
     --color-back-light: #F9F9F9;
     --color-detail-back : #f4f4f4;
+    a {
+      color: var(--color-main-dark);
+    }
   }
 `;
 const OuterPageBox = styled.div`
