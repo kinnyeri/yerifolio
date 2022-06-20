@@ -15,7 +15,6 @@ const HightLightBox = styled.div`
 `;
 
 const HighLighter = styled.div`
-  height: 3vh;
-  max-height: 10px;
+  height: 1vh;
   background-color: var(--color-main);
 `;
