@@ -89,7 +89,7 @@ const DetailsContainer = styled.div`
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   font-size: 1.2rem;
 `;
 const DetailContainer = styled.div`
@@ -103,7 +103,7 @@ const DetailBox = styled.div`
   line-height: 25px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 `;
 const Detail = styled.div`
   & > a {
