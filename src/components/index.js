@@ -1,4 +1,4 @@
-export { DetailContainer } from "./DetailContainer";
+export { DetailDropdown } from "./DetailDropdown";
 export { HighLight } from "./HighLight";
 export { MovePageBtn } from "./MovePageBtn";
 export { ContentsWrapper } from "./ContentsWrapper";

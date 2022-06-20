@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { DetailContainer, PageWrapper } from "../components";
+import { DetailDropdown, PageWrapper } from "../components";
 import { PROFILE } from "../data";
 const SkillBox = styled.div`
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +13,11 @@ export const Skill = () => {
     <PageWrapper icon="📚" title="Skills">
       <SkillBox>
         {PROFILE.skills.map((data) => (
-          <DetailContainer key={data.title} {...data}></DetailContainer>
+          <DetailDropdown
+            key={data.title}
+            {...data}
+            size="20px"
+          ></DetailDropdown>
         ))}
       </SkillBox>
     </PageWrapper>
