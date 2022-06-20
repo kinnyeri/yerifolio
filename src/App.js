@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import { MovePageBtn, PageWrapper, SideBar } from "./components";
+import { MovePageBtn, ContentsWrapper, SideBar } from "./components";
 import { Profile, Project, Skill } from "./pages";
 
 function App() {
@@ -29,10 +29,10 @@ function App() {
         <Profile></Profile>
         <ContentPageBox id="contents">
           <SideBar />
-          <PageWrapper>
+          <ContentsWrapper>
             <Skill />
             <Project />
-          </PageWrapper>
+          </ContentsWrapper>
         </ContentPageBox>
         <MovePageBtn isDown={isDown} OuterPageBoxRef={OuterPageBoxRef} />
       </OuterPageBox>
@@ -44,6 +44,8 @@ const GlobalStyles = createGlobalStyle`
   html {
     --color-main: #BCAFD4;
     --color-back: #efefef;
+    --color-back-light: #F9F9F9;
+    --color-detail-back : #f4f4f4;
   }
 `;
 const OuterPageBox = styled.div`
@@ -52,6 +54,10 @@ const OuterPageBox = styled.div`
 `;
 
 const ContentPageBox = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  @media screen and (max-width: 682px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export default App;

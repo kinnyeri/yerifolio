@@ -88,10 +88,10 @@ const contentUpAnimation = keyframes`
 `;
 const UpdatedDateBox = styled.div`
   position: absolute;
-  bottom: 1vh;
-  left: 1vw;
-  color: color-mix(var(--color-main), black);
+  bottom: 0;
+  color: var(--color-main);
   font-size: 0.9rem;
+  padding-left: 8px;
 `;
 const ContactBox = styled.div`
   width: 8vw;
