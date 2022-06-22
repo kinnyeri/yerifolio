@@ -1,3 +1,4 @@
+export { Content } from "./Content";
 export { DetailDropdown } from "./DetailDropdown";
 export { HighLight } from "./HighLight";
 export { Footer } from "./Footer";
