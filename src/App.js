@@ -48,6 +48,7 @@ const GlobalStyles = createGlobalStyle`
     --color-main-dark: #6C509F;
     --color-back: #efefef;
     --color-back-light: #F9F9F9;
+    --color-back-dark: #DCDCDC;
     --color-detail-back : #f4f4f4;
     a {
       color: var(--color-main-dark);
