@@ -5,3 +5,4 @@ export { MovePageBtn } from "./MovePageBtn";
 export { ContentsWrapper } from "./ContentsWrapper";
 export { PageWrapper } from "./PageWrapper";
 export { SideBar } from "./SideBar";
+export { StackTag } from "./StackTag";

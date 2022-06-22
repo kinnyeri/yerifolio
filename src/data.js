@@ -66,6 +66,34 @@ const PROFILE = {
           content:
             "리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.",
         },
+        { title: "React", content: "리액트는 최고다." },
+        {
+          title: "Konva",
+          content:
+            "리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.",
+        },
+        { title: "React", content: "리액트는 최고다." },
+        {
+          title: "Konva",
+          content:
+            "리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.",
+        },
+        {
+          title: "YEri",
+          content: "I LOVE Y",
+        },
+        {
+          title: "YEri",
+          content: "I LOVE Y",
+        },
+        {
+          title: "YEri",
+          content: "I LOVE Y",
+        },
+        {
+          title: "YEri",
+          content: "I LOVE Y",
+        },
       ],
     },
   ],

@@ -1,5 +1,11 @@
+import { useState } from "react";
 import styled from "styled-components";
-import { HighLight, PageWrapper, DetailDropdown } from "../components";
+import {
+  HighLight,
+  PageWrapper,
+  DetailDropdown,
+  StackTag,
+} from "../components";
 import { PROFILE } from "../data";
 
 export const Project = () => {
@@ -14,6 +20,7 @@ export const Project = () => {
   );
 };
 const Content = ({ title, subTitle, time, team, details, links, stacks }) => {
+  const [tagContent, setTagContent] = useState("");
   return (
     <ContentContainer>
       <TitleBox>
@@ -57,11 +64,18 @@ const Content = ({ title, subTitle, time, team, details, links, stacks }) => {
           <IconBox>🗝</IconBox>
           <DetailBox>
             <Detail>사용기술</Detail>
-            {stacks.map((stack, idx) => (
-              <Detail key={idx}>
-                <DetailDropdown {...stack} size="10px"></DetailDropdown>
-              </Detail>
-            ))}
+            <TagBox>
+              {stacks.map((stack, idx) => (
+                <Detail key={idx}>
+                  <DetailDropdown
+                    {...stack}
+                    size="10px"
+                    handleOpen={setTagContent}
+                  ></DetailDropdown>
+                </Detail>
+              ))}
+            </TagBox>
+            {tagContent && <TagContentBox>{tagContent}</TagContentBox>}
           </DetailBox>
         </DetailContainer>
       </DetailsContainer>
@@ -109,5 +123,13 @@ const DetailBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+`;
+const TagBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+`;
+const TagContentBox = styled.div`
+  padding: 5px 10px;
 `;
 const Detail = styled.div``;
