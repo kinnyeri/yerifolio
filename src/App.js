@@ -1,23 +1,72 @@
+import React, { useRef, useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
-
-const GlobalStyles = createGlobalStyle`
-  html {
-    --color-text: pink;
-    --color-background: white;
-    --color-primary: rebeccapurple;
-  }
-`;
-const TestText = styled.div`
-  color: var(--color-text);
-`;
+import { MovePageBtn, ContentsWrapper, SideBar, Footer } from "./components";
+import { Profile, Project, Skill, Education, Experience, Extra } from "./pages";
 
 function App() {
+  const OuterPageBoxRef = useRef();
+  const [isDown, setIsDown] = useState(true);
+  // const [scrollTop, setScrollTop] = useState(0);
+  useEffect(() => {
+    const wheelHandler = (e) => {
+      const { scrollTop } = OuterPageBoxRef.current;
+      if (isDown && scrollTop >= window.innerHeight - 4) {
+        setIsDown(false);
+      } else if (!isDown && scrollTop < window.innerHeight - 4) {
+        setIsDown(true);
+      }
+    };
+    const boxRefCurrent = OuterPageBoxRef.current;
+    boxRefCurrent.addEventListener("wheel", wheelHandler);
+    return () => {
+      boxRefCurrent.removeEventListener("wheel", wheelHandler);
+    };
+  }, [isDown]);
   return (
     <>
       <GlobalStyles />
-      <TestText>Welcome to yeri's polio</TestText>
+      <OuterPageBox ref={OuterPageBoxRef}>
+        <Profile></Profile>
+        <ContentPageBox id="contents">
+          <SideBar />
+          <ContentsWrapper>
+            <Skill />
+            <Project />
+            <Education />
+            <Experience />
+            <Extra />
+          </ContentsWrapper>
+        </ContentPageBox>
+        <MovePageBtn isDown={isDown} OuterPageBoxRef={OuterPageBoxRef} />
+        <Footer />
+      </OuterPageBox>
     </>
   );
 }
 
+const GlobalStyles = createGlobalStyle`
+  html {
+    --color-main: #BCAFD4;
+    --color-main-dark: #6C509F;
+    --color-back: #efefef;
+    --color-back-light: #F9F9F9;
+    --color-back-dark: #DCDCDC;
+    --color-detail-back : #f4f4f4;
+    a {
+      color: var(--color-main-dark);
+    }
+  }
+`;
+const OuterPageBox = styled.div`
+  height: 100vh;
+  overflow-y: auto;
+`;
+
+const ContentPageBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  @media screen and (max-width: 682px) {
+    grid-template-columns: 1fr;
+  }
+`;
 export default App;
