@@ -89,7 +89,7 @@ const contentUpAnimation = keyframes`
 const UpdatedDateBox = styled.div`
   position: absolute;
   bottom: 0;
-  color: var(--color-main);
+  color: var(--color-main-dark);
   font-size: 0.9rem;
   padding-left: 8px;
 `;

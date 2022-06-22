@@ -1,6 +1,18 @@
 import styled from "styled-components";
-import { DetailDropdown, HighLight, PageWrapper } from "../components";
+import { HighLight, PageWrapper } from "../components";
 import { PROFILE } from "../data";
+
+export const Education = () => {
+  return (
+    <PageWrapper icon="🎓" title="Education">
+      <EducationBox>
+        {PROFILE.educations.map((education) => (
+          <Content {...education} />
+        ))}
+      </EducationBox>
+    </PageWrapper>
+  );
+};
 const Content = ({ title, details }) => {
   return (
     <ContentContainer>
@@ -24,17 +36,6 @@ const Content = ({ title, details }) => {
         ))}
       </DetailsContainer>
     </ContentContainer>
-  );
-};
-export const Education = () => {
-  return (
-    <PageWrapper icon="🎓" title="Education">
-      <EducationBox>
-        {PROFILE.educations.map((education) => (
-          <Content {...education} />
-        ))}
-      </EducationBox>
-    </PageWrapper>
   );
 };
 const EducationBox = styled.div`
@@ -75,8 +76,4 @@ const DetailBox = styled.div`
   flex-direction: column;
   gap: 10px;
 `;
-const Detail = styled.div`
-  & > a {
-    color: var(--color-main-dark);
-  }
-`;
+const Detail = styled.div``;

@@ -1,6 +1,18 @@
 import styled from "styled-components";
 import { HighLight, PageWrapper, DetailDropdown } from "../components";
 import { PROFILE } from "../data";
+
+export const Project = () => {
+  return (
+    <PageWrapper icon="💻" title="Project">
+      <ProjectBox>
+        {PROFILE.projects.map((project) => (
+          <Content key={project.title} {...project} />
+        ))}
+      </ProjectBox>
+    </PageWrapper>
+  );
+};
 const Content = ({ title, subTitle, time, team, details, links, stacks }) => {
   return (
     <ContentContainer>
@@ -56,18 +68,6 @@ const Content = ({ title, subTitle, time, team, details, links, stacks }) => {
     </ContentContainer>
   );
 };
-export const Project = () => {
-  return (
-    <PageWrapper icon="💻" title="Project">
-      <ProjectBox>
-        {PROFILE.projects.map((project) => (
-          <Content key={project.title} {...project} />
-        ))}
-      </ProjectBox>
-    </PageWrapper>
-  );
-};
-
 const ProjectBox = styled.div`
   width: 80%;
   display: flex;
@@ -110,8 +110,4 @@ const DetailBox = styled.div`
   flex-direction: column;
   gap: 5px;
 `;
-const Detail = styled.div`
-  & > a {
-    color: var(--color-main-dark);
-  }
-`;
+const Detail = styled.div``;
