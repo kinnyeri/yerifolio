@@ -93,6 +93,42 @@ const PROFILE = {
       ],
     },
   ],
+  experiences: [
+    {
+      title: "ICT 인턴십 2021 하반기",
+      details: [
+        { icon: "기간", content: "2021.09 - 12" },
+        { icon: "회사", content: "2021.09 - 12" },
+      ],
+    },
+    {
+      title: "월드프렌즈 ICT 봉사단",
+      details: [
+        { icon: "기간", content: "2019.07.13 - 08.11" },
+        {
+          icon: "내용",
+          content:
+            "몽골 울란바토르의 NMCT학교에서 한달동안 IT 교육 봉사 활동을 진행함",
+        },
+      ],
+    },
+  ],
+  extras: [
+    {
+      title: "어학",
+      details: [
+        { icon: "토익", content: "945점" },
+        { icon: "토익 스피킹", content: "Level 6, 150점" },
+      ],
+    },
+    {
+      title: "수상",
+      details: [
+        { icon: "토익", content: "945점" },
+        { icon: "토익 스피킹", content: "Level 6, 150점" },
+      ],
+    },
+  ],
 };
 
 export { PROFILE };

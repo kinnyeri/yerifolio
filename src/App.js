@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { MovePageBtn, ContentsWrapper, SideBar, Footer } from "./components";
-import { Profile, Project, Skill, Education } from "./pages";
+import { Profile, Project, Skill, Education, Experience, Extra } from "./pages";
 
 function App() {
   const OuterPageBoxRef = useRef();
@@ -33,6 +33,8 @@ function App() {
             <Skill />
             <Project />
             <Education />
+            <Experience />
+            <Extra />
           </ContentsWrapper>
         </ContentPageBox>
         <MovePageBtn isDown={isDown} OuterPageBoxRef={OuterPageBoxRef} />

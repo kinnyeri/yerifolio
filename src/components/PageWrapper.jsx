@@ -16,7 +16,6 @@ const PageContainer = styled.div`
   display: grid;
   grid-template-rows: 90px auto;
   overflow-y: hidden;
-  border-top: 2vh solid var(--color-main-dark);
 `;
 
 const PageTitleContainer = styled.div`
