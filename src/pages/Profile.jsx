@@ -20,7 +20,6 @@ const Contact = () => {
 export const Profile = () => {
   return (
     <ProfilBox>
-      <UpdatedDateBox>updated at {PROFILE.updatedDate}</UpdatedDateBox>
       <Contact />
       <ContentBox>
         <ProfileImgBox>
@@ -85,13 +84,6 @@ const contentUpAnimation = keyframes`
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
   }
-`;
-const UpdatedDateBox = styled.div`
-  position: absolute;
-  bottom: 0;
-  color: var(--color-main-dark);
-  font-size: 0.9rem;
-  padding-left: 8px;
 `;
 const ContactBox = styled.div`
   width: 8vw;

@@ -134,16 +134,19 @@ const LIST = (() => {
   let list = [];
   Object.keys(PROFILE)
     .filter((key) => {
-      if (key == "updatedDate" || key == "contact") return false;
+      if (key === "updatedDate" || key === "contact") return false;
       return true;
     })
     .forEach((key) => {
-      list = [...list, key];
-      if (key == "skills") return;
-      const subList = PROFILE[key].map(({ title }) => {
-        return title;
-      });
-      list = [...list, ...subList];
+      let data = { main: key, subs: [] };
+      if (key !== "Skill") {
+        const subs = PROFILE[key].map(({ title }) => {
+          return title;
+        });
+        data = { ...data, subs };
+      }
+      list = [...list, data];
+      return;
     });
   return list;
 })();
