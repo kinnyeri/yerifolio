@@ -7,8 +7,8 @@ export const Content = ({ title, details }) => {
         <HighLight>{title}</HighLight>
       </TitleBox>
       <DetailsContainer>
-        {details.map(({ icon, content, link }) => (
-          <DetailContainer>
+        {details.map(({ icon, content, link }, idx) => (
+          <DetailContainer key={idx}>
             <IconBox>{icon}</IconBox>
             <DetailBox>
               {link !== undefined ? (

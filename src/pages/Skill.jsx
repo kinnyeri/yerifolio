@@ -6,7 +6,7 @@ export const Skill = () => {
   return (
     <PageWrapper icon="📚" title="Skills">
       <SkillBox>
-        {PROFILE.skills.map((data) => (
+        {PROFILE.Skill.map((data) => (
           <DetailDropdown
             key={data.title}
             {...data}

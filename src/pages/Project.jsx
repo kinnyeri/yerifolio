@@ -6,7 +6,7 @@ export const Project = () => {
   return (
     <PageWrapper icon="💻" title="Project">
       <ProjectBox>
-        {PROFILE.projects.map((project) => (
+        {PROFILE.Project.map((project) => (
           <Content key={project.title} {...project} />
         ))}
       </ProjectBox>
