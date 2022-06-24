@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { HighLight, PageWrapper, Content } from "../components";
+import { PageWrapper, Content } from "../components";
 import { PROFILE } from "../data";
 
 export const Education = () => {
@@ -15,7 +15,7 @@ export const Education = () => {
 };
 
 const EducationBox = styled.div`
-  width: 80%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;

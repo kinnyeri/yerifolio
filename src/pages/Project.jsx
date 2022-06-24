@@ -69,7 +69,7 @@ const Content = ({ title, subTitle, time, team, details, links, stacks }) => {
   );
 };
 const ProjectBox = styled.div`
-  width: 80%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
