@@ -20,7 +20,6 @@ const Contact = () => {
 export const Profile = () => {
   return (
     <ProfilBox>
-      <UpdatedDateBox>updated at {PROFILE.updatedDate}</UpdatedDateBox>
       <Contact />
       <ContentBox>
         <ProfileImgBox>
