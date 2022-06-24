@@ -5,4 +5,5 @@ export { Footer } from "./Footer";
 export { MovePageBtn } from "./MovePageBtn";
 export { ContentsWrapper } from "./ContentsWrapper";
 export { PageWrapper } from "./PageWrapper";
+export { ProgressBar } from "./ProgressBar";
 export { SideBar } from "./SideBar";

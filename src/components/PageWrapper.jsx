@@ -11,11 +11,14 @@ export const PageWrapper = ({ icon, title, children }) => {
   );
 };
 const PageContainer = styled.div`
-  width: 100%;
+  width: 80%;
   margin-bottom: 50px;
   display: grid;
   grid-template-rows: 90px auto;
   overflow-y: hidden;
+  @media screen and (max-width: 682px) {
+    width: 100%;
+  }
 `;
 
 const PageTitleContainer = styled.div`

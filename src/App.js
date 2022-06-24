@@ -1,34 +1,39 @@
 import React, { useRef, useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import { MovePageBtn, ContentsWrapper, SideBar, Footer } from "./components";
+import {
+  MovePageBtn,
+  ContentsWrapper,
+  Footer,
+  ProgressBar,
+} from "./components";
 import { Profile, Project, Skill, Education, Experience, Extra } from "./pages";
 
 function App() {
   const OuterPageBoxRef = useRef();
-  const [isDown, setIsDown] = useState(true);
-  // const [scrollTop, setScrollTop] = useState(0);
-  useEffect(() => {
-    const wheelHandler = (e) => {
-      const { scrollTop } = OuterPageBoxRef.current;
-      if (isDown && scrollTop >= window.innerHeight - 4) {
-        setIsDown(false);
-      } else if (!isDown && scrollTop < window.innerHeight - 4) {
-        setIsDown(true);
-      }
-    };
-    const boxRefCurrent = OuterPageBoxRef.current;
-    boxRefCurrent.addEventListener("wheel", wheelHandler);
-    return () => {
-      boxRefCurrent.removeEventListener("wheel", wheelHandler);
-    };
-  }, [isDown]);
+  // const [isDown, setIsDown] = useState(true);
+  // // const [scrollTop, setScrollTop] = useState(0);
+  // useEffect(() => {
+  //   const wheelHandler = (e) => {
+  //     const { scrollTop } = OuterPageBoxRef.current;
+  //     if (isDown && scrollTop >= window.innerHeight - 4) {
+  //       setIsDown(false);
+  //     } else if (!isDown && scrollTop < window.innerHeight - 4) {
+  //       setIsDown(true);
+  //     }
+  //   };
+  //   const boxRefCurrent = OuterPageBoxRef.current;
+  //   boxRefCurrent.addEventListener("wheel", wheelHandler);
+  //   return () => {
+  //     boxRefCurrent.removeEventListener("wheel", wheelHandler);
+  //   };
+  // }, [isDown]);
   return (
     <>
       <GlobalStyles />
       <OuterPageBox ref={OuterPageBoxRef}>
-        <Profile></Profile>
+        <ProgressBar OuterPageBoxRef={OuterPageBoxRef} />
+        <Profile />
         <ContentPageBox id="contents">
-          <SideBar />
           <ContentsWrapper>
             <Skill />
             <Project />
@@ -37,7 +42,7 @@ function App() {
             <Extra />
           </ContentsWrapper>
         </ContentPageBox>
-        <MovePageBtn isDown={isDown} OuterPageBoxRef={OuterPageBoxRef} />
+        <MovePageBtn />
         <Footer />
       </OuterPageBox>
     </>
@@ -62,11 +67,5 @@ const OuterPageBox = styled.div`
   overflow-y: auto;
 `;
 
-const ContentPageBox = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  @media screen and (max-width: 682px) {
-    grid-template-columns: 1fr;
-  }
-`;
+const ContentPageBox = styled.div``;
 export default App;
