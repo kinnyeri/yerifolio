@@ -11,7 +11,7 @@ export const PageWrapper = ({ icon, title, children }) => {
   );
 };
 const PageContainer = styled.div`
-  width: 100%;
+  padding: 2%;
   margin-bottom: 50px;
   display: grid;
   grid-template-rows: 90px auto;

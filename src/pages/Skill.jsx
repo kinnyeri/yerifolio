@@ -4,9 +4,9 @@ import { PROFILE } from "../data";
 
 export const Skill = () => {
   return (
-    <PageWrapper icon="📚" title="Skills">
+    <PageWrapper icon="📚" title="Skills" id="Skill">
       <SkillBox>
-        {PROFILE.skills.map((data) => (
+        {PROFILE.Skill.map((data) => (
           <DetailDropdown
             key={data.title}
             {...data}
@@ -18,7 +18,7 @@ export const Skill = () => {
   );
 };
 const SkillBox = styled.div`
-  width: 80%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;

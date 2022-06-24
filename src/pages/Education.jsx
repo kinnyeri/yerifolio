@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { HighLight, PageWrapper, Content } from "../components";
+import { PageWrapper, Content } from "../components";
 import { PROFILE } from "../data";
 
 export const Education = () => {
   return (
     <PageWrapper icon="🎓" title="Education">
       <EducationBox>
-        {PROFILE.educations.map((education) => (
-          <Content {...education} />
+        {PROFILE.Education.map((education) => (
+          <Content key={education.title} {...education} />
         ))}
       </EducationBox>
     </PageWrapper>
@@ -15,7 +15,7 @@ export const Education = () => {
 };
 
 const EducationBox = styled.div`
-  width: 80%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;

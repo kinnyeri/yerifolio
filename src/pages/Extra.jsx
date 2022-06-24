@@ -6,15 +6,15 @@ export const Extra = () => {
   return (
     <PageWrapper icon="🎸" title="etc.">
       <ExtraBox>
-        {PROFILE.extras.map((extra) => (
-          <Content {...extra} />
+        {PROFILE.etc.map((extra) => (
+          <Content key={extra.title} {...extra} />
         ))}
       </ExtraBox>
     </PageWrapper>
   );
 };
 const ExtraBox = styled.div`
-  width: 80%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;

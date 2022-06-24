@@ -5,7 +5,7 @@ const PROFILE = {
     blog: "https://velog.io/@kinnyeri",
     email: "mailto:98sena@naver.com?body=[from portfolio]",
   },
-  skills: [
+  Skill: [
     { title: "JavaScript", content: "클로저 개념을 명확히 압니다." },
     { title: "React", content: "클로저 개념을 명확히 압니다." },
     {
@@ -16,7 +16,7 @@ const PROFILE = {
     { title: "Android", content: "클로저 개념을 명확히 압니다." },
     { title: "Java", content: "클로저 개념을 명확히 압니다." },
   ],
-  projects: [
+  Project: [
     {
       title: "Collector's",
       subTitle: "수많은 사람들의 상상을 실현시켜줄 수 있는 쇼핑몰",
@@ -69,7 +69,7 @@ const PROFILE = {
       ],
     },
   ],
-  educations: [
+  Education: [
     {
       title: "숭실대학교",
       details: [
@@ -93,7 +93,7 @@ const PROFILE = {
       ],
     },
   ],
-  experiences: [
+  Experience: [
     {
       title: "ICT 인턴십 2021 하반기",
       details: [
@@ -113,7 +113,7 @@ const PROFILE = {
       ],
     },
   ],
-  extras: [
+  etc: [
     {
       title: "어학",
       details: [
@@ -130,5 +130,25 @@ const PROFILE = {
     },
   ],
 };
-
-export { PROFILE };
+const LIST = (() => {
+  let list = [];
+  Object.keys(PROFILE)
+    .filter((key) => {
+      if (key === "updatedDate" || key === "contact") return false;
+      return true;
+    })
+    .forEach((key) => {
+      let data = { main: key, subs: [] };
+      if (key !== "Skill") {
+        const subs = PROFILE[key].map(({ title }) => {
+          return title;
+        });
+        data = { ...data, subs };
+      }
+      list = [...list, data];
+      return;
+    });
+  return list;
+})();
+console.log(LIST);
+export { PROFILE, LIST };
