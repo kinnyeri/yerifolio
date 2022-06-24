@@ -7,7 +7,7 @@ export const Experience = () => {
     <PageWrapper icon="👾" title="Experience">
       <ExperienceBox>
         {PROFILE.experiences.map((experience) => (
-          <Content {...experience} />
+          <Content key={experience.title} {...experience} />
         ))}
       </ExperienceBox>
     </PageWrapper>

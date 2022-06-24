@@ -7,7 +7,7 @@ export const Extra = () => {
     <PageWrapper icon="🎸" title="etc.">
       <ExtraBox>
         {PROFILE.extras.map((extra) => (
-          <Content {...extra} />
+          <Content key={extra.title} {...extra} />
         ))}
       </ExtraBox>
     </PageWrapper>

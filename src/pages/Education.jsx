@@ -7,7 +7,7 @@ export const Education = () => {
     <PageWrapper icon="🎓" title="Education">
       <EducationBox>
         {PROFILE.educations.map((education) => (
-          <Content {...education} />
+          <Content key={education.title} {...education} />
         ))}
       </EducationBox>
     </PageWrapper>
