@@ -6,12 +6,6 @@ export const ProgressBar = ({ OuterPageBoxRef }) => {
   useEffect(() => {
     const wheelHandler = (e) => {
       const { scrollTop, scrollHeight, clientHeight } = OuterPageBoxRef.current;
-      console.log(
-        scrollTop,
-        scrollHeight,
-        scrollTop + clientHeight,
-        (((scrollTop + clientHeight) / scrollHeight) * 100).toFixed(1)
-      );
       setProgressed(
         (
           ((scrollTop + clientHeight * Number(progressed) * 0.01) /

@@ -10,23 +10,30 @@ import { Profile, Project, Skill, Education, Experience, Extra } from "./pages";
 
 function App() {
   const OuterPageBoxRef = useRef();
-  // const [isDown, setIsDown] = useState(true);
-  // // const [scrollTop, setScrollTop] = useState(0);
-  // useEffect(() => {
-  //   const wheelHandler = (e) => {
-  //     const { scrollTop } = OuterPageBoxRef.current;
-  //     if (isDown && scrollTop >= window.innerHeight - 4) {
-  //       setIsDown(false);
-  //     } else if (!isDown && scrollTop < window.innerHeight - 4) {
-  //       setIsDown(true);
-  //     }
-  //   };
-  //   const boxRefCurrent = OuterPageBoxRef.current;
-  //   boxRefCurrent.addEventListener("wheel", wheelHandler);
-  //   return () => {
-  //     boxRefCurrent.removeEventListener("wheel", wheelHandler);
-  //   };
-  // }, [isDown]);
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  useEffect(() => {
+    const wheelHandler = (e) => {
+      const { scrollTop, clientHeight } = OuterPageBoxRef.current;
+      console.log(scrollTop, clientHeight);
+      if (scrollTop > 0) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
+      }
+    };
+    const boxRefCurrent = OuterPageBoxRef.current;
+    boxRefCurrent.addEventListener("scroll", wheelHandler);
+    return () => {
+      boxRefCurrent.removeEventListener("scroll", wheelHandler);
+    };
+  }, []);
+  const handleClick = () => {
+    console.log("clicked");
+    OuterPageBoxRef.current.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <GlobalStyles />
@@ -42,7 +49,7 @@ function App() {
             <Extra />
           </ContentsWrapper>
         </ContentPageBox>
-        <MovePageBtn />
+        {showTopBtn && <MovePageBtn handleClick={handleClick} />}
         <Footer />
       </OuterPageBox>
     </>
