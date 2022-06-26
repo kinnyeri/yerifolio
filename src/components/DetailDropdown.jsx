@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -26,6 +26,15 @@ export const DetailDropdown = ({ title, content, size }) => {
     </Container>
   );
 };
+const downAnimation = keyframes`
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+`;
 const Container = styled.div`
   width: 100%;
   background: var(--color-detail-back);
@@ -49,6 +58,8 @@ const ContentContainer = styled.div`
   padding: 0 ${(props) => props.size} ${(props) => props.size}
     ${(props) => props.size};
   font-size: 1rem;
+
+  animation: ${downAnimation} 0.4s ease;
   @media screen and (max-width: 682px) {
     font-size: 0.8rem;
   }

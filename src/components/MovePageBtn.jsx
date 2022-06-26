@@ -18,9 +18,9 @@ export const MovePageBtn = ({ handleClick }) => {
 };
 
 const GoToContentBtn = styled.div`
-  width: 6vw;
+  width: 4vw;
   min-width: 52px;
-  height: 6vw;
+  height: 4vw;
   min-height: 52px;
   border-radius: 100%;
 

@@ -1,22 +1,10 @@
 import styled, { keyframes } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { PROFILE } from "../data";
 import { HighLight } from "../components";
 
-const Contact = () => {
-  return (
-    <ContactBox>
-      <ContactButton href={PROFILE.contact.github} target="_blank">
-        <FontAwesomeIcon icon={faGithub} />
-      </ContactButton>
-      <ContactButton href={PROFILE.contact.blog} target="_blank">
-        🏡
-      </ContactButton>
-      <ContactButton href={PROFILE.contact.email}>📧</ContactButton>
-    </ContactBox>
-  );
-};
 export const Profile = () => {
   return (
     <ProfilBox>
@@ -41,11 +29,27 @@ export const Profile = () => {
           <br />
           언제나 도전하는 사람이 되고자 합니다.
         </SubTitleBox>
+        <MoreContentIconBox>
+          <FontAwesomeIcon icon={faArrowDown} />
+        </MoreContentIconBox>
       </ContentBox>
     </ProfilBox>
   );
 };
 
+const Contact = () => {
+  return (
+    <ContactBox>
+      <ContactButton href={PROFILE.contact.github} target="_blank">
+        <FontAwesomeIcon icon={faGithub} />
+      </ContactButton>
+      <ContactButton href={PROFILE.contact.blog} target="_blank">
+        🏡
+      </ContactButton>
+      <ContactButton href={PROFILE.contact.email}>📧</ContactButton>
+    </ContactBox>
+  );
+};
 const ProfilBox = styled.div`
   height: 100vh;
 
@@ -137,7 +141,7 @@ const ContactButton = styled.a`
 `;
 const ContentBox = styled.div`
   width: 100%;
-  height: 80%;
+  height: 85%;
 
   display: flex;
   justify-content: space-between;
@@ -182,4 +186,26 @@ const SubTitleBox = styled.div`
   @media screen and (max-width: 682px) {
     font-size: 18px;
   }
+`;
+const downIconAnimation = keyframes`
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+`;
+const MoreContentIconBox = styled.div`
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-name: ${downIconAnimation};
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 `;
