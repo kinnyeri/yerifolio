@@ -42,14 +42,13 @@ const DetailsContainer = styled.div`
   flex-direction: column;
   gap: 5px;
   font-size: 1.2rem;
+  @media screen and (max-width: 682px) {
+    font-size: 1rem;
+  }
 `;
 const DetailContainer = styled.div`
   display: flex;
   gap: 20px;
-  @media screen and (max-width: 682px) {
-    display: grid;
-    grid-template-columns: 35px auto;
-  }
 `;
 const IconBox = styled.div`
   line-height: 25px;

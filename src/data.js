@@ -6,41 +6,61 @@ const PROFILE = {
     email: "mailto:98sena@naver.com?body=[from portfolio]",
   },
   skills: [
-    { title: "JavaScript", content: "클로저 개념을 명확히 압니다." },
-    { title: "React", content: "클로저 개념을 명확히 압니다." },
     {
-      title: "Python",
+      title: "JavaScript",
       content:
-        "클로저 개념을 명확히 압니다.클로저 개념을 명확히 압니다.클로저 개념을 명확히 압니다.클로저 개념을 명확히 압니다.클로저 개념을 명확히 압니다.클로저 개념을 명확히 압니다.클로저 개념을 명확히 압니다.클로저 개념을 명확히 압니다.클로저 개념을 명확히 압니다.클로저 개념을 명확히 압니다.",
+        "문법을 활용하여 자료구조와 알고리즘을 구현할 수 있습니다. 스코프, 렉시컬 환경 등 특징을 이해하고 있습니다.",
     },
-    { title: "Android", content: "클로저 개념을 명확히 압니다." },
-    { title: "Java", content: "클로저 개념을 명확히 압니다." },
+    {
+      title: "HTML/CSS",
+      content:
+        "시멘틱 태그 등을 활용하여 사이트의 구조를 구성할 수 있고, 기본 CSS를 이용하여 구조를 꾸밀 수 있습니다. 또한, styled-components를 활용할 수 있습니다.",
+    },
+    {
+      title: "React",
+      content:
+        "컴포넌트를 구성하고, 적절하게 재활용하여 사이트의 구조를 구성할 수 있습니다. useState,useEffect,useContext 등 다양한 hook을 사용하여 웹을 만들 수 있습니다. Redux를 통해 상태관리를 할 수 있습니다.",
+    },
+    {
+      title: "Git",
+      content:
+        "깃을 통해 작업 내역과 버전 관리를 할 수 있습니다. rebase, merge 등을 통해 branch 관리를 할 수 있습니다. 커멘드를 사용하여 협업에 참여할 수 있습니다.",
+    },
+    {
+      title: "Android",
+      content:
+        "안드로이드 스튜디오를 통해 안드로이드 앱을 만들 수 있습니다. Activity, Fragment를 이용하여 페이지를 구성할 수 있고, intent를 통해 상태를 관리할 수 있습니다.",
+    },
   ],
   projects: [
     {
       title: "Collector's",
       subTitle: "수많은 사람들의 상상을 실현시켜줄 수 있는 쇼핑몰",
-      time: "2022.5.11-27",
-      team: "팀 프로젝트 (FE 2명, BE 2명)",
+      time: "2022.05.23 - 06.04",
+      team: "팀장 & FE in 팀 프로젝트 (FE 2명, BE 2명)",
       details: [
-        "팀장과 FE를 맡았습니다.",
-        "상품 상세 및 검색 페이지 구현",
-        "관리자 페이지 구현",
+        "마블 캐릭터의 장비 및 능력을 판매하는 쇼핑몰로 구매시 사용자의 능력치, 레벨이 올라가 재미를 더했습니다.",
+        "상품 상세, 목록, 장바구니 및 주문, 관리자 페이지 구현을 맡아 개발하였습니다.",
       ],
       links: [
-        { title: "Git Hub", link: "" },
-        { title: "회고", link: "" },
+        {
+          title: "Git Hub",
+          link: "https://github.com/Elice-Team-20/Collectors",
+        },
         {
           title: "배포 사이트",
           link: "http://kdt-sw2-seoul-team20.elicecoding.com/",
         },
       ],
       stacks: [
-        { title: "React", content: "리액트는 최고다." },
         {
-          title: "React",
+          title: "JavaScript",
           content:
-            "리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.",
+            "함수와 컴포넌트를 통해 활용하여 화면을 동적으로 구성하였습니다. 비동기를 활용하여 MongoDB에서 데이터를 받아 표시하였습니다.",
+        },
+        {
+          title: "HTML/CSS",
+          content: "바닐라 HTML/CSS를 활용하여 사이트를 구성하였습니다.",
         },
       ],
     },
@@ -48,23 +68,124 @@ const PROFILE = {
       title: "GBTI",
       subTitle: "나만의 MBTI 결과를 받아보자",
       time: "2022.1-3",
-      team: "팀 프로젝트 (FE 2명, 디자이너 1명)",
+      team: "FE in 팀 프로젝트 (FE 2명, 디자이너 1명)",
       details: [
-        "FE를 맡았습니다.",
-        "MBTI 테스트 페이지, 나만의 결과 카드 꾸미기 페이지 구현",
-        "나만의 결과 카드 꾸미기를 위해 Konva를 사용하여 스티커 붙이기, 리사이징, 전체 삭제 기능 등을 구현",
+        "트렌드인 MBTI를 대학생 컨셉으로 기획하여 테스트 사이트를 만들었습니다.",
+        "사람은 모여있기도, 개성있는 것도 좋아합니다. 그래서 나만의 결과 카드를 가질 수 있도록 재미를 더했습니다.",
+        "MBTI 테스트 페이지, 나만의 결과 카드 꾸미기 페이지 구현하였습니다.",
+        "나만의 결과 카드 꾸미기를 위해 Konva를 사용하여 스티커 붙이기, 리사이징, 전체 삭제 기능 등을 구현을 맡아 개발하였습니다.",
       ],
       links: [
-        { link: "", title: "Git Hub" },
-        { link: "", title: "회고" },
+        { link: "https://github.com/GaeBTI/GBTI_FE", title: "Git Hub" },
         { link: "https://www.gbti.site", title: "배포 사이트" },
       ],
       stacks: [
-        { title: "React", content: "리액트는 최고다." },
+        {
+          title: "React",
+          content:
+            "재활용할 수 있는 컴포넌트가 있어 활용하게 되었습니다. hook을 통해 테스트 기능을 구현하였습니다.",
+        },
+        {
+          title: "styled-components",
+          content:
+            "flex, grid 등을 이용하여 화면을 구성하고, 꾸밀 수 있습니다.",
+        },
         {
           title: "Konva",
           content:
-            "리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.리액트는 최고다.",
+            "캔버스를 구성하여 꾸미기 기능을 구현하기 위해 사용하였습니다. 캔버스 위에 노드를 구성하여 리사이징, 이동, 삭제 등을 구현하였습니다.",
+        },
+      ],
+    },
+    {
+      title: "오또칼렌",
+      subTitle: "바쁜 현대인들을 위한 일정 정리 자동화 솔루션!",
+      time: "2021.03 - 05",
+      team: "팀장 & Flutter 개발 in 팀 프로젝트 (Flutter 2명, BE 1명)",
+      details: [
+        "수기로 작성한 일정을 사진 촬영하면 일정에 맞게 태그가 되어 앱에 연동합니다.",
+        "흩어져 있는 일정들을 태그별로 분류하여 한눈에 알아보기 쉽고, 일정 관리가 수월해집니다.",
+        "캘린더, 일정 등록, 태그별 캘린더 및 관리 등 기능과 일정 분류 기능 구현을 맡아 개발하였습니다.",
+      ],
+      links: [
+        {
+          title: "Git Hub",
+          link: "https://github.com/LuttSpace/AutoCalen",
+        },
+        {
+          title: "소개 영상",
+          link: "https://youtu.be/4prgEn_bIYg",
+        },
+      ],
+      stacks: [
+        {
+          title: "Flutter",
+          content:
+            "크로스 플랫폼을 활용하여 iOS, AOS 앱을 동시 개발하였습니다. 다양한 패키지와 간단한 디자인이 가능하여 사용하게 되었습니다.",
+        },
+        {
+          title: "Firebase",
+          content:
+            "구글 Authentication을 통한 로그인과 Firestore을 통해 사용자, 일정, 태그 정보들을 저장하였습니다.",
+        },
+        {
+          title: "Python",
+          content:
+            "Naver Cloud Platform CLOVA OCR과 Kakao Brain Pororo NLP를 활용하기 위해 사용하게 되었습니다. 오픈소스들을 활용해 앱의 주요 기능 들을 구현하기 위해 필터링 코드를 개발하였습니다.",
+        },
+        {
+          title: "CLOVA OCR",
+          content:
+            "OCR을 활용하여 수기로 작성한 일정을 촬영하고, 그 기록을 인식하여 글자로 변환하여 DB에 저장하였습니다.",
+        },
+        {
+          title: "PORORO NLP",
+          content:
+            "NLP를 활용하여 일정 내용을 분석하여 사용자가 정해둔 태그에 맞게 분류하는 기능을 구현하였습니다.",
+        },
+      ],
+    },
+    {
+      title: "DailyMap",
+      subTitle: "장소 기반 일기장",
+      time: "2019.11 - 12",
+      team: "팀장 & Android 개발 in 팀 프로젝트 (Android 3명)",
+      details: [
+        "사람은 기억을 떠올릴 때 특정 날짜를 기억하기 보다는 장소를 통해서 기억하게 됩니다. 이를 이용하여 기억이 시간 순에 제한 받지 않고 좀 더 자유로운 기억 저장소가 됩니다.",
+        "한 눈에 자신의 기록을 지도로 봄으로써 추억을 회상할 수 있습니다.",
+        "일기장 등록, 장소별, 날짜별 일기 목록을 구현을 맡았습니다.",
+        "과제 점수 130점 중 125점을 받을 수 있었고, 최종적으로 A+를 받을 수 있었습니다.",
+      ],
+      links: [
+        {
+          title: "Git Hub",
+          link: "https://github.com/kinnyeri/DailyMap",
+        },
+        {
+          title: "소개 영상",
+          link: "https://youtu.be/B-4G6ynEttA",
+        },
+      ],
+      stacks: [
+        {
+          title: "JAVA",
+          content:
+            "JAVA를 통해 안드로이드 앱을 구현하였습니다. 멀티 스레드를 구현하여 공유 다이어리에 공유원이 일기를 올리면 알림을 보내주는 기능을 구현하였습니다.",
+        },
+        {
+          title: "Android",
+          content:
+            "안드로이드 앱을 개발하기 위해 사용하였습니다. Activity, Fragment를 통해 페이지를 구성하였고, intent를 활용하여 공유 기능을 구현하였습니다.",
+        },
+        {
+          title: "Firebase",
+          content:
+            "구글 Authentication을 통한 로그인과 Firestore을 통해 사용자, 일기 정보들을 저장하였습니다.",
+        },
+        {
+          title: "Google Map API",
+          content:
+            "일기장이 표시될 장소를 마킹하기 위하여 구글 지도 API를 활용하여 구현하였습니다. 사용자가 기록한 일기의 장소를 마킹하고, 관련 일기를 목록으로 보여줍니다.",
         },
       ],
     },
@@ -75,7 +196,12 @@ const PROFILE = {
       details: [
         {
           icon: "전공",
-          content: "글로벌미디어학부 2018.02 - 2022.08 (졸업 예정)",
+          content: "글로벌미디어학부",
+          link: "http://media.ssu.ac.kr/sub.php?code=ACNMZXH",
+        },
+        {
+          icon: "기간",
+          content: "2018.02 - 2022.08 (졸업 예정)",
         },
         { icon: "학점", content: "4.17/4.5" },
       ],
@@ -83,12 +209,11 @@ const PROFILE = {
     {
       title: "엘리스 SW 엔지니어 트랙 2기",
       details: [
-        { icon: "⏱", content: "2022.04 - 2022.07" },
-        { icon: "➿", content: "풀스택 기반 4달 교육" },
+        { icon: "⏱", content: "2022.04 - 07" },
         {
-          icon: "🔗",
-          content: "관련 포스팅",
-          link: "",
+          icon: "➿",
+          content:
+            "JavaScript, HTML/CSS, TypeScript, React 등 FE 전반적인 교육과 Node.js를 교육받았습니다. 총 4달 간 두 번의 프로젝트를 진행하였고, 주 5일 매일 7시간씩 학습하였습니다.",
         },
       ],
     },
@@ -98,7 +223,16 @@ const PROFILE = {
       title: "ICT 인턴십 2021 하반기",
       details: [
         { icon: "기간", content: "2021.09 - 12" },
-        { icon: "회사", content: "2021.09 - 12" },
+        {
+          icon: "회사",
+          content: "HCLAB (자세 교정 헬스 ioT 관련)",
+          link: "https://www.hclab.kr/",
+        },
+        {
+          icon: "➿",
+          content:
+            "모바일 앱 개발 인턴으로 기존 앱 유지 및 보수와 새로운 앱 기획 및 개발을 진행하였습니다.",
+        },
       ],
     },
     {
@@ -106,26 +240,48 @@ const PROFILE = {
       details: [
         { icon: "기간", content: "2019.07.13 - 08.11" },
         {
-          icon: "내용",
+          icon: "➿",
           content:
-            "몽골 울란바토르의 NMCT학교에서 한달동안 IT 교육 봉사 활동을 진행함",
+            "몽골 울란바토르의 NMCT학교에서 한 달동안 IT 교육 봉사 활동을 진행하였습니다.",
+        },
+        {
+          icon: "🔗 ",
+          content: "활동 인스타그램",
+          link: "https://instagram.com/navit2019?igshid=YmMyMTA2M2Y=",
+        },
+      ],
+    },
+    {
+      title: "CES & 실리콘 밸리 연수",
+      details: [
+        { icon: "기간", content: "2019.01.07 - 13" },
+        {
+          icon: "➿",
+          content:
+            "IT 창업 관련 교육 연수로 실리콘 밸리를 3일간 견학 후 CES 2019에 참석하였습니다.",
         },
       ],
     },
   ],
   extras: [
     {
-      title: "어학",
+      title: "어학 자격증",
       details: [
         { icon: "토익", content: "945점" },
         { icon: "토익 스피킹", content: "Level 6, 150점" },
       ],
     },
     {
-      title: "수상",
+      title: "수상 내역",
       details: [
-        { icon: "토익", content: "945점" },
-        { icon: "토익 스피킹", content: "Level 6, 150점" },
+        {
+          icon: "스파르탄 위닝 창업 경진 대회",
+          content: "우수상 수상 / 2018.11.17",
+        },
+        {
+          icon: "스마트 팩토리와 AI를 활용한 아이디어 공모전",
+          content: "장려상 수상 / 2021.01.29",
+        },
       ],
     },
   ],

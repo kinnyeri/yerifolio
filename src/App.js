@@ -66,6 +66,7 @@ const GlobalStyles = createGlobalStyle`
     --color-detail-back : #f4f4f4;
     a {
       color: var(--color-main-dark);
+      text-decoration-line: none;
     }
   }
 `;

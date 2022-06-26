@@ -10,7 +10,6 @@ export const DetailDropdown = ({ title, content, size }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
-    console.log("click");
     setIsOpen(!isOpen);
   };
   return (
@@ -35,6 +34,9 @@ const Container = styled.div`
 const TitleContainer = styled.div`
   padding: ${(props) => props.size};
   font-size: 1.2rem;
+  @media screen and (max-width: 682px) {
+    font-size: 1rem;
+  }
 `;
 const IconBox = styled.span`
   color: var(--color-main);
@@ -47,4 +49,7 @@ const ContentContainer = styled.div`
   padding: 0 ${(props) => props.size} ${(props) => props.size}
     ${(props) => props.size};
   font-size: 1rem;
+  @media screen and (max-width: 682px) {
+    font-size: 0.8rem;
+  }
 `;
