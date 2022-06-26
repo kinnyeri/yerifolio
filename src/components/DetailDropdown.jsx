@@ -26,15 +26,6 @@ export const DetailDropdown = ({ title, content, size }) => {
     </Container>
   );
 };
-const downAnimation = keyframes`
-  0% {
-    transform: translateY(-50%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-`;
 const Container = styled.div`
   width: 100%;
   background: var(--color-detail-back);
@@ -54,6 +45,14 @@ const TitleBox = styled.span`
   margin-left: 15px;
 `;
 
+const downAnimation = keyframes`
+  0% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
 const ContentContainer = styled.div`
   padding: 0 ${(props) => props.size} ${(props) => props.size}
     ${(props) => props.size};

@@ -105,12 +105,12 @@ const DetailContainer = styled.div`
   grid-template-columns: 35px auto;
 `;
 const IconBox = styled.div`
-  line-height: 25px;
+  line-height: 30px;
 `;
 const DetailBox = styled.div`
-  line-height: 25px;
+  line-height: 30px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 `;
 const Detail = styled.div``;

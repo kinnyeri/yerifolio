@@ -13,7 +13,9 @@ export const Content = ({ title, details }) => {
             <DetailBox>
               {link !== undefined ? (
                 <Detail>
-                  <a href={link}>{content}</a>
+                  <a href={link} target="_blank">
+                    {content}
+                  </a>
                 </Detail>
               ) : (
                 <Detail>{content}</Detail>
@@ -51,10 +53,10 @@ const DetailContainer = styled.div`
   gap: 20px;
 `;
 const IconBox = styled.div`
-  line-height: 25px;
+  line-height: 30px;
 `;
 const DetailBox = styled.div`
-  line-height: 25px;
+  line-height: 30px;
   display: flex;
   flex-direction: column;
   gap: 10px;

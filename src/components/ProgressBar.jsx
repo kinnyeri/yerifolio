@@ -13,7 +13,6 @@ export const ProgressBar = ({ OuterPageBoxRef }) => {
           100
         ).toFixed(1)
       );
-      console.log(progressed);
     };
     const boxRefCurrent = OuterPageBoxRef.current;
     boxRefCurrent.addEventListener("scroll", wheelHandler);

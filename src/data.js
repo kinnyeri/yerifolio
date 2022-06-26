@@ -48,8 +48,8 @@ const PROFILE = {
           link: "https://github.com/Elice-Team-20/Collectors",
         },
         {
-          title: "배포 사이트",
-          link: "http://kdt-sw2-seoul-team20.elicecoding.com/",
+          title: "❌ 배포 사이트 (수정 중)",
+          link: "",
         },
       ],
       stacks: [
