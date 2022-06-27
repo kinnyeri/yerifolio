@@ -67,7 +67,7 @@ const PROFILE = {
     {
       title: "GBTI",
       subTitle: "나만의 MBTI 결과를 받아보자",
-      time: "2022.1-3",
+      time: "2022.01 - 03",
       team: "FE in 팀 프로젝트 (FE 2명, 디자이너 1명)",
       details: [
         "트렌드인 MBTI를 대학생 컨셉으로 기획하여 테스트 사이트를 만들었습니다.",
@@ -222,7 +222,7 @@ const PROFILE = {
     {
       title: "ICT 인턴십 2021 하반기",
       details: [
-        { icon: "기간", content: "2021.09 - 12" },
+        { icon: "⏱", content: "2021.09 - 12" },
         {
           icon: "회사",
           content: "HCLAB (자세 교정 헬스 ioT 관련)",
@@ -233,16 +233,47 @@ const PROFILE = {
           content:
             "모바일 앱 개발 인턴으로 기존 앱 유지 및 보수와 새로운 앱 기획 및 개발을 진행하였습니다.",
         },
+        {
+          icon: "🔗",
+          content: "참여 프로젝트 (펀딩)",
+          link: "https://www.wadiz.kr/web/campaign/detail/129557?utm_source=maker_unknown&utm_medium=129557_hclab_redirect",
+        },
+      ],
+    },
+    {
+      title: "숭실대학교 CGLAB 학부 연구생",
+      details: [
+        { icon: "⏱", content: "2019.11 - 2021.01" },
+        {
+          icon: "➿",
+          content:
+            "유전 알고리즘을 활용하여 게임 맵 레벨별 자동 생성 연구 진행 및 골프 퍼팅 게임 개발에 참여하였습니다. (20.08-21.01)",
+        },
+        {
+          icon: "➿",
+          content:
+            "태양광 설치 게임형 교육 프로그램 개발 과제 참여하여 4파트 중 전기 시공 파트를 맡아 개발하였습니다. (19.11 - 20.04)",
+        },
+        {
+          icon: "🔗",
+          content: "태양광 설치 게임형 교육 프로그램 시연 영상",
+          link: "https://youtu.be/ei1SCu3DOh8",
+        },
       ],
     },
     {
       title: "월드프렌즈 ICT 봉사단",
       details: [
-        { icon: "기간", content: "2019.07.13 - 08.11" },
+        { icon: "⏱", content: "2019.07.13 - 08.11" },
         {
           icon: "➿",
           content:
             "몽골 울란바토르의 NMCT학교에서 한 달동안 IT 교육 봉사 활동을 진행하였습니다.",
+        },
+        {
+          icon: "➿",
+          content:
+            "C와 JavaScript 교육을 진행하여 최종적으로 개인 사이트와 게임을 개발할 수 있도록 하였습니다.",
         },
         {
           icon: "🔗 ",
@@ -254,7 +285,7 @@ const PROFILE = {
     {
       title: "CES & 실리콘 밸리 연수",
       details: [
-        { icon: "기간", content: "2019.01.07 - 13" },
+        { icon: "⏱", content: "2019.01.07 - 13" },
         {
           icon: "➿",
           content:

@@ -42,7 +42,7 @@ const DetailsContainer = styled.div`
   padding-left: 1vw;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   font-size: 1.2rem;
   @media screen and (max-width: 682px) {
     font-size: 1rem;
@@ -53,10 +53,10 @@ const DetailContainer = styled.div`
   gap: 20px;
 `;
 const IconBox = styled.div`
-  line-height: 30px;
+  line-height: 28px;
 `;
 const DetailBox = styled.div`
-  line-height: 30px;
+  line-height: 28px;
   display: flex;
   flex-direction: column;
   gap: 10px;
