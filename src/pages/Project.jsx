@@ -54,7 +54,7 @@ const Content = ({ title, subTitle, time, team, details, links, stacks }) => {
           </DetailBox>
         </DetailContainer>
         <DetailContainer>
-          <IconBox>🗝</IconBox>
+          <IconBox>📚</IconBox>
           <DetailBox>
             <Detail>사용기술</Detail>
             {stacks.map((stack, idx) => (
