@@ -13,14 +13,13 @@ export const ProgressBar = ({ OuterPageBoxRef }) => {
           100
         ).toFixed(1)
       );
-      console.log(progressed);
     };
     const boxRefCurrent = OuterPageBoxRef.current;
     boxRefCurrent.addEventListener("scroll", wheelHandler);
     return () => {
       boxRefCurrent.removeEventListener("scroll", wheelHandler);
     };
-  }, [progressed]);
+  }, [progressed, OuterPageBoxRef]);
   return (
     <ProgressBarBox>
       <Progress size={`${progressed}%`} />

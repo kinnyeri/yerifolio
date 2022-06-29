@@ -7,13 +7,15 @@ export const Content = ({ title, details }) => {
         <HighLight>{title}</HighLight>
       </TitleBox>
       <DetailsContainer>
-        {details.map(({ icon, content, link }) => (
-          <DetailContainer>
+        {details.map(({ icon, content, link }, idx) => (
+          <DetailContainer key={idx}>
             <IconBox>{icon}</IconBox>
             <DetailBox>
               {link !== undefined ? (
                 <Detail>
-                  <a href={link}>{content}</a>
+                  <a href={link} target="_blank">
+                    {content}
+                  </a>
                 </Detail>
               ) : (
                 <Detail>{content}</Detail>
@@ -40,7 +42,7 @@ const DetailsContainer = styled.div`
   padding-left: 1vw;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   font-size: 1.2rem;
   @media screen and (max-width: 682px) {
     font-size: 1rem;
@@ -51,10 +53,10 @@ const DetailContainer = styled.div`
   gap: 20px;
 `;
 const IconBox = styled.div`
-  line-height: 25px;
+  line-height: 28px;
 `;
 const DetailBox = styled.div`
-  line-height: 25px;
+  line-height: 28px;
   display: flex;
   flex-direction: column;
   gap: 10px;

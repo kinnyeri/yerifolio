@@ -1,5 +1,5 @@
 const PROFILE = {
-  updatedDate: "2022.06.17",
+  updatedDate: "2022.06.29",
   contact: {
     github: "https://github.com/kinnyeri",
     blog: "https://velog.io/@kinnyeri",
@@ -49,7 +49,7 @@ const PROFILE = {
         },
         {
           title: "배포 사이트",
-          link: "http://kdt-sw2-seoul-team20.elicecoding.com/",
+          link: "https://collectors-twenty.herokuapp.com/",
         },
       ],
       stacks: [
@@ -60,20 +60,23 @@ const PROFILE = {
         },
         {
           title: "HTML/CSS",
-          content: "바닐라 HTML/CSS를 활용하여 사이트를 구성하였습니다.",
+          content:
+            "바닐라 HTML/CSS를 활용하여 사이트를 구성하였습니다. 접근성을 높이기 위해 시맨틱 태그를 활용하였습니다.",
         },
       ],
     },
     {
       title: "GBTI",
       subTitle: "나만의 MBTI 결과를 받아보자",
-      time: "2022.1-3",
+      time: "2022.01 - 03",
       team: "FE in 팀 프로젝트 (FE 2명, 디자이너 1명)",
       details: [
-        "트렌드인 MBTI를 대학생 컨셉으로 기획하여 테스트 사이트를 만들었습니다.",
+        "트렌드인 MBTI를 개강 시즌 대학생 컨셉으로 기획하여 테스트 사이트를 만들었습니다.",
         "사람은 모여있기도, 개성있는 것도 좋아합니다. 그래서 나만의 결과 카드를 가질 수 있도록 재미를 더했습니다.",
         "MBTI 테스트 페이지, 나만의 결과 카드 꾸미기 페이지 구현하였습니다.",
-        "나만의 결과 카드 꾸미기를 위해 Konva를 사용하여 스티커 붙이기, 리사이징, 전체 삭제 기능 등을 구현을 맡아 개발하였습니다.",
+        "나만의 결과 카드 꾸미기를 위해 Konva를 사용하여 스티커 붙이기, 리사이징, 전체 삭제 기능 등 기능 구현을 맡아 개발하였습니다.",
+        "배포 후 1주일간 약 6천여명이 방문하여 사용했으며, 현재까지는 7천명이 방문하였습니다.",
+        "여러 피드백을 받아 볼 수 있어 FE로서 가져야 할 태도와 개발 방향에 대해 생각해볼 수 있던 기회였습니다.",
       ],
       links: [
         { link: "https://github.com/GaeBTI/GBTI_FE", title: "Git Hub" },
@@ -105,7 +108,7 @@ const PROFILE = {
       details: [
         "수기로 작성한 일정을 사진 촬영하면 일정에 맞게 태그가 되어 앱에 연동합니다.",
         "흩어져 있는 일정들을 태그별로 분류하여 한눈에 알아보기 쉽고, 일정 관리가 수월해집니다.",
-        "캘린더, 일정 등록, 태그별 캘린더 및 관리 등 기능과 일정 분류 기능 구현을 맡아 개발하였습니다.",
+        "캘린더, 일정 등록, 태그별 캘린더 및 관리 등 기능을 맡아 개발하였고, 일정 분류 및 일정 전치리 코드 개발에 참여하였습니다.",
       ],
       links: [
         {
@@ -204,6 +207,7 @@ const PROFILE = {
           content: "2018.02 - 2022.08 (졸업 예정)",
         },
         { icon: "학점", content: "4.17/4.5" },
+        { icon: "전공 학점", content: "4.39/4.5" },
       ],
     },
     {
@@ -222,7 +226,7 @@ const PROFILE = {
     {
       title: "ICT 인턴십 2021 하반기",
       details: [
-        { icon: "기간", content: "2021.09 - 12" },
+        { icon: "⏱", content: "2021.09 - 12" },
         {
           icon: "회사",
           content: "HCLAB (자세 교정 헬스 ioT 관련)",
@@ -233,16 +237,47 @@ const PROFILE = {
           content:
             "모바일 앱 개발 인턴으로 기존 앱 유지 및 보수와 새로운 앱 기획 및 개발을 진행하였습니다.",
         },
+        {
+          icon: "🔗",
+          content: "참여 프로젝트 (펀딩)",
+          link: "https://www.wadiz.kr/web/campaign/detail/129557?utm_source=maker_unknown&utm_medium=129557_hclab_redirect",
+        },
+      ],
+    },
+    {
+      title: "숭실대학교 CGLAB 학부 연구생",
+      details: [
+        { icon: "⏱", content: "2019.11 - 2021.01" },
+        {
+          icon: "➿",
+          content:
+            "유전 알고리즘을 활용하여 게임 맵 레벨별 자동 생성 연구 진행 및 골프 퍼팅 게임 개발에 참여하였습니다. (20.08 - 21.01)",
+        },
+        {
+          icon: "➿",
+          content:
+            "태양광 설치 게임형 교육 프로그램 개발 과제 참여하여 4파트 중 전기 시공 파트를 맡아 개발하였습니다. (19.11 - 20.04)",
+        },
+        {
+          icon: "🔗",
+          content: "태양광 설치 게임형 교육 프로그램 시연 영상",
+          link: "https://youtu.be/ei1SCu3DOh8",
+        },
       ],
     },
     {
       title: "월드프렌즈 ICT 봉사단",
       details: [
-        { icon: "기간", content: "2019.07.13 - 08.11" },
+        { icon: "⏱", content: "2019.07.13 - 08.11" },
         {
           icon: "➿",
           content:
             "몽골 울란바토르의 NMCT학교에서 한 달동안 IT 교육 봉사 활동을 진행하였습니다.",
+        },
+        {
+          icon: "➿",
+          content:
+            "C와 JavaScript 교육을 진행하여 최종적으로 개인 사이트와 게임을 개발할 수 있도록 하였습니다.",
         },
         {
           icon: "🔗 ",
@@ -254,11 +289,11 @@ const PROFILE = {
     {
       title: "CES & 실리콘 밸리 연수",
       details: [
-        { icon: "기간", content: "2019.01.07 - 13" },
+        { icon: "⏱", content: "2019.01.07 - 13" },
         {
           icon: "➿",
           content:
-            "IT 창업 관련 교육 연수로 실리콘 밸리를 3일간 견학 후 CES 2019에 참석하였습니다.",
+            "IT 창업 관련 교육 연수로 실리콘 밸리를 3일간 견학 후 CES 2019에 참석하였습니다. 삼성, 구글, 퀄컴 등 여러 기업들이 선보인 혁신 기술을 체험할 수 있었고, 새로운 트렌드에 대해 배울 수 있었습니다.",
         },
       ],
     },

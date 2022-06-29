@@ -7,7 +7,7 @@ export const Experience = () => {
     <PageWrapper icon="👾" title="Experience">
       <ExperienceBox>
         {PROFILE.experiences.map((experience) => (
-          <Content {...experience} />
+          <Content key={experience.title} {...experience} />
         ))}
       </ExperienceBox>
     </PageWrapper>
@@ -19,5 +19,5 @@ const ExperienceBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 `;

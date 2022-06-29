@@ -1,22 +1,46 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 export const MovePageBtn = ({ handleClick }) => {
   return (
     <GoToContentBtn onClick={handleClick}>
-      <FontAwesomeIcon
-        icon={faCaretUp}
-        style={{
-          color: "var(--color-back)",
-          fontSize: "2rem",
-          lineHeight: "2rem",
-        }}
-      />
+      <FontAwesomeIcon icon={faCaretUp} />
     </GoToContentBtn>
   );
 };
-
+const startAnimation = keyframes`
+  0% {
+    filter: blur(0.1rem);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+`;
+const endAnimation = keyframes`
+  0% {
+    filter: blur(0.1rem);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+`;
 const GoToContentBtn = styled.div`
   width: 4vw;
   min-width: 52px;
@@ -27,12 +51,22 @@ const GoToContentBtn = styled.div`
   position: fixed;
   bottom: 1rem;
   right: 1rem;
+  color: var(--color-back);
   background-color: var(--color-main);
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
 
+  font-size: 2rem;
+  line-height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 50;
   text-decoration: none;
+  animation: ${startAnimation} 0.8s 1 ease-in normal;
+  &:hover {
+    cursor: pointer;
+
+    background-color: var(--color-back);
+    color: var(--color-main);
+  }
 `;

@@ -7,7 +7,7 @@ export const Education = () => {
     <PageWrapper icon="🎓" title="Education">
       <EducationBox>
         {PROFILE.educations.map((education) => (
-          <Content {...education} />
+          <Content key={education.title} {...education} />
         ))}
       </EducationBox>
     </PageWrapper>
@@ -19,5 +19,5 @@ const EducationBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 `;

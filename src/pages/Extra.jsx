@@ -7,7 +7,7 @@ export const Extra = () => {
     <PageWrapper icon="🎸" title="etc.">
       <ExtraBox>
         {PROFILE.extras.map((extra) => (
-          <Content {...extra} />
+          <Content key={extra.title} {...extra} />
         ))}
       </ExtraBox>
     </PageWrapper>
@@ -18,5 +18,5 @@ const ExtraBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 `;
