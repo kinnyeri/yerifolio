@@ -30,6 +30,10 @@ const Container = styled.div`
   width: 100%;
   background: var(--color-detail-back);
   border: 1px solid var(--color-main);
+  &:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
+  }
 `;
 const TitleContainer = styled.div`
   padding: ${(props) => props.size};
