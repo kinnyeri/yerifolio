@@ -214,7 +214,7 @@ const PROFILE = {
           type: "file",
           icon: "📁",
           content: "성적 증명서",
-          file: "ssu_gpa.pdf",
+          file: "/ssu_gpa.pdf",
         },
       ],
     },

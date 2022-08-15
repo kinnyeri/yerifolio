@@ -1,17 +1,14 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { HighLight } from "./HighLight";
+import { Modal, HighLight } from "../components";
 export const Content = ({ title, details }) => {
   const [modal, setModal] = useState(false);
-  // {link !== undefined ? (
-  //   <Detail>
-  //     <a href={link} target="_blank">
-  //       {content}
-  //     </a>
-  //   </Detail>
-  // ) : (
-  //   <Detail>{content}</Detail>
-  // )}
+  const [filePath, setFilePath] = useState("");
+  const handleClick = (file) => {
+    setModal(!modal);
+    setFilePath(file !== undefined ? file : "");
+    console.log(modal, file);
+  };
   return (
     <ContentContainer>
       <TitleBox>
@@ -34,7 +31,9 @@ export const Content = ({ title, details }) => {
                   default: <Detail>{content}</Detail>,
                   file: (
                     <Detail>
-                      <button>{content}</button>
+                      <button onClick={() => handleClick(file)}>
+                        {content}
+                      </button>
                     </Detail>
                   ),
                   withFile: (
@@ -48,6 +47,7 @@ export const Content = ({ title, details }) => {
             </DetailBox>
           </DetailContainer>
         ))}
+        {modal ? <Modal handleClick={handleClick} filePath={filePath} /> : null}
       </DetailsContainer>
     </ContentContainer>
   );
