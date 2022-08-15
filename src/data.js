@@ -1,5 +1,5 @@
 const PROFILE = {
-  updatedDate: "2022.06.29",
+  updatedDate: "2022.08.15",
   contact: {
     github: "https://github.com/kinnyeri",
     blog: "https://velog.io/@kinnyeri",
@@ -195,7 +195,7 @@ const PROFILE = {
   ],
   educations: [
     {
-      title: "숭실대학교",
+      title: "🏫 숭실대학교",
       details: [
         {
           icon: "전공",
@@ -208,6 +208,17 @@ const PROFILE = {
         },
         { icon: "학점", content: "4.17/4.5" },
         { icon: "전공 학점", content: "4.39/4.5" },
+      ],
+    },
+    {
+      title: "SSAFY 8기",
+      details: [
+        { icon: "⏱", content: "2022.07 -" },
+        {
+          icon: "➿",
+          content:
+            "Java, 알고리즘을 학습하고 있으며, 앞으로 Java Spring, Vue.js 등을 배울 예정입니다. 총 1년동안 주 5일 매일 8시간씩 학습합니다.",
+        },
       ],
     },
     {
@@ -302,7 +313,7 @@ const PROFILE = {
     {
       title: "어학 자격증",
       details: [
-        { icon: "토익", content: "945점" },
+        { icon: "토익", content: "935점" },
         { icon: "토익 스피킹", content: "Level 6, 150점" },
       ],
     },
