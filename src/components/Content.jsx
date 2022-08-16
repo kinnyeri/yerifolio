@@ -39,7 +39,9 @@ export const Content = ({ title, details }) => {
                   withFile: (
                     <Detail>
                       <span>{content} </span>
-                      <button>{fileName}</button>
+                      <button onClick={() => handleClick(file)}>
+                        {fileName}
+                      </button>
                     </Detail>
                   ),
                 }[type]
