@@ -1,5 +1,5 @@
 const PROFILE = {
-  updatedDate: "2022.06.29",
+  updatedDate: "2022.08.15",
   contact: {
     github: "https://github.com/kinnyeri",
     blog: "https://velog.io/@kinnyeri",
@@ -195,26 +195,47 @@ const PROFILE = {
   ],
   educations: [
     {
-      title: "숭실대학교",
+      title: "🏫 숭실대학교",
       details: [
         {
+          type: "default",
           icon: "전공",
           content: "글로벌미디어학부",
           link: "http://media.ssu.ac.kr/sub.php?code=ACNMZXH",
         },
         {
+          type: "default",
           icon: "기간",
           content: "2018.02 - 2022.08 (졸업 예정)",
         },
-        { icon: "학점", content: "4.17/4.5" },
-        { icon: "전공 학점", content: "4.39/4.5" },
+        { type: "default", icon: "학점", content: "4.17/4.5" },
+        { type: "default", icon: "전공 학점", content: "4.39/4.5" },
+        {
+          type: "file",
+          icon: "📁",
+          content: "성적 증명서",
+          file: "/files/ssu_gpa.pdf",
+        },
+      ],
+    },
+    {
+      title: "SSAFY 8기",
+      details: [
+        { type: "default", icon: "⏱", content: "2022.07 -" },
+        {
+          type: "default",
+          icon: "➿",
+          content:
+            "Java, 알고리즘을 학습하고 있으며, 앞으로 Java Spring, Vue.js 등을 배울 예정입니다. 총 1년동안 주 5일 매일 8시간씩 학습합니다.",
+        },
       ],
     },
     {
       title: "엘리스 SW 엔지니어 트랙 2기",
       details: [
-        { icon: "⏱", content: "2022.04 - 07" },
+        { type: "default", icon: "⏱", content: "2022.04 - 07" },
         {
+          type: "default",
           icon: "➿",
           content:
             "JavaScript, HTML/CSS, TypeScript, React 등 FE 전반적인 교육과 Node.js를 교육받았습니다. 총 4달 간 두 번의 프로젝트를 진행하였고, 주 5일 매일 7시간씩 학습하였습니다.",
@@ -226,39 +247,51 @@ const PROFILE = {
     {
       title: "ICT 인턴십 2021 하반기",
       details: [
-        { icon: "⏱", content: "2021.09 - 12" },
+        { type: "default", icon: "⏱", content: "2021.09 - 12" },
         {
+          type: "default",
           icon: "회사",
           content: "HCLAB (자세 교정 헬스 ioT 관련)",
           link: "https://www.hclab.kr/",
         },
         {
+          type: "default",
           icon: "➿",
           content:
             "모바일 앱 개발 인턴으로 기존 앱 유지 및 보수와 새로운 앱 기획 및 개발을 진행하였습니다.",
         },
         {
+          type: "link",
           icon: "🔗",
           content: "참여 프로젝트 (펀딩)",
           link: "https://www.wadiz.kr/web/campaign/detail/129557?utm_source=maker_unknown&utm_medium=129557_hclab_redirect",
+        },
+        {
+          type: "file",
+          icon: "📁",
+          content: "인턴 확인서",
+          file: "/files/internship.pdf",
         },
       ],
     },
     {
       title: "숭실대학교 CGLAB 학부 연구생",
       details: [
-        { icon: "⏱", content: "2019.11 - 2021.01" },
+        { type: "default", icon: "⏱", content: "2019.11 - 2021.01" },
         {
+          type: "default",
           icon: "➿",
           content:
             "유전 알고리즘을 활용하여 게임 맵 레벨별 자동 생성 연구 진행 및 골프 퍼팅 게임 개발에 참여하였습니다. (20.08 - 21.01)",
         },
         {
+          type: "default",
           icon: "➿",
           content:
             "태양광 설치 게임형 교육 프로그램 개발 과제 참여하여 4파트 중 전기 시공 파트를 맡아 개발하였습니다. (19.11 - 20.04)",
         },
         {
+          type: "link",
           icon: "🔗",
           content: "태양광 설치 게임형 교육 프로그램 시연 영상",
           link: "https://youtu.be/ei1SCu3DOh8",
@@ -268,29 +301,39 @@ const PROFILE = {
     {
       title: "월드프렌즈 ICT 봉사단",
       details: [
-        { icon: "⏱", content: "2019.07.13 - 08.11" },
+        { type: "default", icon: "⏱", content: "2019.07.13 - 08.11" },
         {
+          type: "default",
           icon: "➿",
           content:
             "몽골 울란바토르의 NMCT학교에서 한 달동안 IT 교육 봉사 활동을 진행하였습니다.",
         },
         {
+          type: "default",
           icon: "➿",
           content:
             "C와 JavaScript 교육을 진행하여 최종적으로 개인 사이트와 게임을 개발할 수 있도록 하였습니다.",
         },
         {
+          type: "link",
           icon: "🔗 ",
           content: "활동 인스타그램",
           link: "https://instagram.com/navit2019?igshid=YmMyMTA2M2Y=",
+        },
+        {
+          type: "file",
+          icon: "📁",
+          content: "봉사 확인서",
+          file: "/files/volunteer_worldfriends.pdf",
         },
       ],
     },
     {
       title: "CES & 실리콘 밸리 연수",
       details: [
-        { icon: "⏱", content: "2019.01.07 - 13" },
+        { type: "default", icon: "⏱", content: "2019.01.07 - 13" },
         {
+          type: "default",
           icon: "➿",
           content:
             "IT 창업 관련 교육 연수로 실리콘 밸리를 3일간 견학 후 CES 2019에 참석하였습니다. 삼성, 구글, 퀄컴 등 여러 기업들이 선보인 혁신 기술을 체험할 수 있었고, 새로운 트렌드에 대해 배울 수 있었습니다.",
@@ -302,20 +345,32 @@ const PROFILE = {
     {
       title: "어학 자격증",
       details: [
-        { icon: "토익", content: "945점" },
-        { icon: "토익 스피킹", content: "Level 6, 150점" },
+        { type: "default", icon: "토익", content: "935점" },
+        { type: "default", icon: "토익 스피킹", content: "Level 6, 150점" },
+        {
+          type: "file",
+          icon: "📁",
+          content: "어학 성적 확인서",
+          file: "/files/toeic.pdf",
+        },
       ],
     },
     {
       title: "수상 내역",
       details: [
         {
-          icon: "스파르탄 위닝 창업 경진 대회",
-          content: "우수상 수상 / 2018.11.17",
-        },
-        {
+          type: "withFile",
           icon: "스마트 팩토리와 AI를 활용한 아이디어 공모전",
           content: "장려상 수상 / 2021.01.29",
+          file: "/files/aword_smartfactory.pdf",
+          fileName: "상장",
+        },
+        {
+          type: "withFile",
+          icon: "스파르탄 위닝 창업 경진 대회",
+          content: "우수상 수상 / 2018.11.17",
+          file: "/files/aword_spartan.pdf",
+          fileName: "수상 확인서",
         },
       ],
     },

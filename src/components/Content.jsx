@@ -1,28 +1,55 @@
+import { useState } from "react";
 import styled from "styled-components";
-import { HighLight } from "./HighLight";
+import { Modal, HighLight } from "../components";
 export const Content = ({ title, details }) => {
+  const [modal, setModal] = useState(false);
+  const [filePath, setFilePath] = useState("");
+  const handleClick = (file) => {
+    setModal(!modal);
+    setFilePath(file !== undefined ? file : "");
+    console.log(modal, file);
+  };
   return (
     <ContentContainer>
       <TitleBox>
         <HighLight>{title}</HighLight>
       </TitleBox>
       <DetailsContainer>
-        {details.map(({ icon, content, link }, idx) => (
+        {details.map(({ type, icon, content, link, file, fileName }, idx) => (
           <DetailContainer key={idx}>
             <IconBox>{icon}</IconBox>
             <DetailBox>
-              {link !== undefined ? (
-                <Detail>
-                  <a href={link} target="_blank">
-                    {content}
-                  </a>
-                </Detail>
-              ) : (
-                <Detail>{content}</Detail>
-              )}
+              {
+                {
+                  link: (
+                    <Detail>
+                      <a href={link} target="_blank">
+                        {content}
+                      </a>
+                    </Detail>
+                  ),
+                  default: <Detail>{content}</Detail>,
+                  file: (
+                    <Detail>
+                      <button onClick={() => handleClick(file)}>
+                        {content}
+                      </button>
+                    </Detail>
+                  ),
+                  withFile: (
+                    <Detail>
+                      <span>{content} </span>
+                      <button onClick={() => handleClick(file)}>
+                        {fileName}
+                      </button>
+                    </Detail>
+                  ),
+                }[type]
+              }
             </DetailBox>
           </DetailContainer>
         ))}
+        {modal ? <Modal handleClick={handleClick} filePath={filePath} /> : null}
       </DetailsContainer>
     </ContentContainer>
   );

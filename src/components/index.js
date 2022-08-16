@@ -1,6 +1,7 @@
 export { Content } from "./Content";
 export { DetailDropdown } from "./DetailDropdown";
 export { HighLight } from "./HighLight";
+export { Modal } from "./Modal";
 export { Footer } from "./Footer";
 export { MovePageBtn } from "./MovePageBtn";
 export { ContentsWrapper } from "./ContentsWrapper";
