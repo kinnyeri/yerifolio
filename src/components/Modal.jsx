@@ -3,14 +3,27 @@ import { pdfjs, Document, Page } from "react-pdf";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useRef } from "react";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 export const Modal = ({ handleClick, filePath }) => {
+  const modalRef = useRef();
+  useEffect(() => {
+    document.addEventListener("mousedown", handleModalOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleModalOutside);
+    };
+  }, []);
+  const handleModalOutside = (e) => {
+    if (!modalRef.current.contains(e.target)) {
+      handleClick();
+    }
+  };
   return (
     <ModalPageBox
       style={{ top: window.scrollY, left: 0 }}
       onClick={(e) => e.stopPropagation()}
     >
-      <ModalBox>
+      <ModalBox ref={modalRef}>
         <ModalCancelBtn onClick={() => handleClick()}>
           <FontAwesomeIcon icon={faClose} />
         </ModalCancelBtn>
