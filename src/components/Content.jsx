@@ -31,17 +31,17 @@ export const Content = ({ title, details }) => {
                   default: <Detail>{content}</Detail>,
                   file: (
                     <Detail>
-                      <button onClick={() => handleClick(file)}>
+                      <FileButton onClick={() => handleClick(file)}>
                         {content}
-                      </button>
+                      </FileButton>
                     </Detail>
                   ),
                   withFile: (
                     <Detail>
                       <span>{content} </span>
-                      <button onClick={() => handleClick(file)}>
+                      <FileButton onClick={() => handleClick(file)}>
                         {fileName}
-                      </button>
+                      </FileButton>
                     </Detail>
                   ),
                 }[type]
@@ -89,3 +89,19 @@ const DetailBox = styled.div`
   gap: 10px;
 `;
 const Detail = styled.div``;
+
+const FileButton = styled.button`
+  padding: 5px 15px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 12px;
+  background-color: var(--color-detail-back);
+  &:hover {
+    cursor: pointer;
+
+    background-color: var(--color-main);
+    border-color: var(--color-main);
+  }
+`;

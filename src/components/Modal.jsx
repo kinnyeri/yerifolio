@@ -71,7 +71,8 @@ const ModalCancelBtn = styled.button`
 
   margin-top: 3px;
   margin-right: 3px;
-  float: right;
+
   border: 0;
   background: 0;
+  color: black;
 `;

@@ -13,7 +13,7 @@ function App() {
   const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {
     const wheelHandler = (e) => {
-      const { scrollTop, clientHeight } = OuterPageBoxRef.current;
+      const { scrollTop } = OuterPageBoxRef.current;
       if (scrollTop > 0) {
         setShowTopBtn(true);
       } else {
