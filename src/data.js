@@ -9,7 +9,7 @@ const PROFILE = {
     {
       title: "JavaScript",
       content:
-        "문법을 활용하여 자료구조와 알고리즘을 구현할 수 있습니다. 스코프, 렉시컬 환경 등 특징을 이해하고 있습니다.",
+        "문법을 활용하여 자료구조와 알고리즘을 구현할 수 있습니다. 호이스팅, 클로저 등 특징을 이해하고 있습니다.",
     },
     {
       title: "HTML/CSS",
@@ -19,7 +19,7 @@ const PROFILE = {
     {
       title: "React",
       content:
-        "컴포넌트를 구성하고, 적절하게 재활용하여 사이트의 구조를 구성할 수 있습니다. useState,useEffect,useContext 등 다양한 hook을 사용하여 웹을 만들 수 있습니다. Redux를 통해 상태관리를 할 수 있습니다.",
+        "컴포넌트를 구성하고, 적절하게 재활용하여 사이트의 구조를 구성할 수 있습니다. useState,useEffect,useContext 등 다양한 hook을 사용하여 웹을 만들 수 있습니다. Redux를 공부하고 있습니다.",
     },
     {
       title: "Git",
@@ -29,7 +29,7 @@ const PROFILE = {
     {
       title: "Android",
       content:
-        "안드로이드 스튜디오를 통해 안드로이드 앱을 만들 수 있습니다. Activity, Fragment를 이용하여 페이지를 구성할 수 있고, intent를 통해 상태를 관리할 수 있습니다.",
+        "안드로이드 스튜디오를 통해 안드로이드 앱을 만들 수 있습니다. Activity, Fragment를 이용하여 페이지를 구성할 수 있습니다.",
     },
   ],
   projects: [
@@ -86,7 +86,7 @@ const PROFILE = {
         {
           title: "React",
           content:
-            "재활용할 수 있는 컴포넌트가 있어 활용하게 되었습니다. hook을 통해 테스트 기능을 구현하였습니다.",
+            "재활용할 수 있는 컴포넌트가 있어 선택하였습니다. hook을 통해 테스트 기능을 구현하였습니다.",
         },
         {
           title: "styled-components",
@@ -124,7 +124,7 @@ const PROFILE = {
         {
           title: "Flutter",
           content:
-            "크로스 플랫폼을 활용하여 iOS, AOS 앱을 동시 개발하였습니다. 다양한 패키지와 간단한 디자인이 가능하여 사용하게 되었습니다.",
+            "크로스 플랫폼을 활용하여 iOS, AOS 앱을 동시 개발하였습니다. 다양한 패키지와 빌트인 위젯 사용이 가능하여 사용하게 되었습니다.",
         },
         {
           title: "Firebase",
