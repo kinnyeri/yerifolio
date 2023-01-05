@@ -4,7 +4,7 @@ import { PROFILE } from "../data";
 
 export const Skill = () => {
   return (
-    <PageWrapper icon="📚" title="Skills">
+    <PageWrapper icon="📚" title="Stack">
       <SkillBox>
         {PROFILE.skills.map((data) => (
           <DetailDropdown

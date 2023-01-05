@@ -32,6 +32,7 @@ const ProgressBarBox = styled.div`
   background-color: var(--color-back-dark);
 
   position: fixed;
+  z-index: 1;
 `;
 const Progress = styled.div`
   width: ${(props) => props.size};

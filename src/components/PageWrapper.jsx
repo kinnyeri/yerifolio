@@ -4,7 +4,7 @@ export const PageWrapper = ({ icon, title, children }) => {
     <PageContainer>
       <PageTitleContainer>
         <PageTitleIconBox>{icon}</PageTitleIconBox>
-        <PageTitleBox>{title}</PageTitleBox>
+        <PageTitleBox id={title}>{title}</PageTitleBox>
       </PageTitleContainer>
       <PageContentBox>{children}</PageContentBox>
     </PageContainer>
