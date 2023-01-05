@@ -74,5 +74,12 @@ const OuterPageBox = styled.div`
   overflow-y: auto;
 `;
 
-const ContentPageBox = styled.div``;
+const ContentPageBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  @media screen and (max-width: 682px) {
+    grid-template-columns: 1fr;
+  }
+`;
 export default App;
