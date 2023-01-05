@@ -5,6 +5,7 @@ import {
   ContentsWrapper,
   Footer,
   ProgressBar,
+  SideBar,
 } from "./components";
 import { Profile, Project, Skill, Education, Experience, Extra } from "./pages";
 
@@ -40,6 +41,7 @@ function App() {
         <ProgressBar OuterPageBoxRef={OuterPageBoxRef} />
         <Profile />
         <ContentPageBox id="contents">
+          <SideBar />
           <ContentsWrapper>
             <Skill />
             <Project />
@@ -74,5 +76,8 @@ const OuterPageBox = styled.div`
   overflow-y: auto;
 `;
 
-const ContentPageBox = styled.div``;
+const ContentPageBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+`;
 export default App;

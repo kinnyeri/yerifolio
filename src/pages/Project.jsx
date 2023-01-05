@@ -4,7 +4,7 @@ import { PROFILE } from "../data";
 
 export const Project = () => {
   return (
-    <PageWrapper icon="💻" title="Project">
+    <PageWrapper icon="💻" title="Projects">
       <ProjectBox>
         {PROFILE.projects.map((project) => (
           <Content key={project.title} {...project} />
