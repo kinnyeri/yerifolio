@@ -5,6 +5,7 @@ import {
   ContentsWrapper,
   Footer,
   ProgressBar,
+  SideBar,
 } from "./components";
 import { Profile, Project, Skill, Education, Experience, Extra } from "./pages";
 
@@ -40,6 +41,7 @@ function App() {
         <ProgressBar OuterPageBoxRef={OuterPageBoxRef} />
         <Profile />
         <ContentPageBox id="contents">
+          <SideBar />
           <ContentsWrapper>
             <Skill />
             <Project />

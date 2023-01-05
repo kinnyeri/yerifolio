@@ -8,18 +8,39 @@ const SideBarBox = styled.div`
   justify-content: center;
   align-items: center;
 
+<<<<<<< HEAD
   min-width: 150px;
+=======
+  min-width: 200px;
+>>>>>>> d6cdcfdf11845c3a0ed6b1ae5a543648377e4b68
   height: 100vh;
   color: black;
   background-color: var(--color-main);
 
   position: sticky;
-  top: 0;
+  top: 5px;
 
   font-family: PyeongChangPeace-Bold;
+<<<<<<< HEAD
 
   @media screen and (max-width: 682px) {
     display: none;
+=======
+`;
+const ContainerBox = styled.div`
+  height: 70%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 30px;
+`;
+const IndexName = styled.a`
+  &:hover {
+    color: white;
+    transition: 0.2s;
+>>>>>>> d6cdcfdf11845c3a0ed6b1ae5a543648377e4b68
   }
 `;
 const ContainerBox = styled.div`
@@ -43,7 +64,7 @@ export const SideBar = () => {
     <SideBarBox>
       <ContainerBox>
         <div>
-          <IndexName href="#Skills">Skills</IndexName>
+          <IndexName href="#Stack">Stack</IndexName>
         </div>
         <div>
           <IndexName href="#Projects">Projects</IndexName>
