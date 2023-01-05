@@ -4,3 +4,4 @@ export { Extra } from "./Extra";
 export { Profile } from "./Profile";
 export { Project } from "./Project";
 export { Skill } from "./Skill";
+export { Career } from "./Career";

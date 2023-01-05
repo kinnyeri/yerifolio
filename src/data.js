@@ -1,5 +1,5 @@
 const PROFILE = {
-  updatedDate: "2022.08.15",
+  updatedDate: "2023.01.02",
   contact: {
     github: "https://github.com/kinnyeri",
     blog: "https://velog.io/@kinnyeri",
@@ -9,7 +9,12 @@ const PROFILE = {
     {
       title: "JavaScript",
       content:
-        "문법을 활용하여 자료구조와 알고리즘을 구현할 수 있습니다. 호이스팅, 클로저 등 특징을 이해하고 있습니다.",
+        "문법을 활용하여 자료구조와 알고리즘을 구현할 수 있습니다. 호이스팅, 클로저 등 특징을 이해하고 있습니다. 자바스크립트 만의 메소드를 활용하여 코드의 가독성을 높일 수 있습니다.",
+    },
+    {
+      title: "Java",
+      content:
+        "객체지향언어에 대한 이해를 바탕으로 Java를 이용한 개발에 참여할 수 있습니다. Class, Interface, 추상 Class 등을 이해하고 있습니다.",
     },
     {
       title: "HTML/CSS",
@@ -19,10 +24,15 @@ const PROFILE = {
     {
       title: "React",
       content:
-        "컴포넌트를 구성하고, 적절하게 재활용하여 사이트의 구조를 구성할 수 있습니다. useState,useEffect,useContext 등 다양한 hook을 사용하여 웹을 만들 수 있습니다. Redux를 공부하고 있습니다.",
+        "컴포넌트를 구성하고, 적절하게 재활용하여 사이트의 구조를 구성할 수 있습니다. useState,useEffect,useContext 등 다양한 hook을 사용하여 웹을 만들 수 있습니다. 상태 관리 도구인 Redux를 익히고 있습니다.",
     },
     {
-      title: "Git",
+      title: "Spring Boot",
+      content:
+        "MVC 구조를 이해하고 있으며, 이를 활용해 필요한 REST API를 개발할 수 있습니다. Mybatis를 이용해 DB와 인터렉션을 할 수 있습니다.",
+    },
+    {
+      title: "git",
       content:
         "깃을 통해 작업 내역과 버전 관리를 할 수 있습니다. rebase, merge 등을 통해 branch 관리를 할 수 있습니다. 커멘드를 사용하여 협업에 참여할 수 있습니다.",
     },
@@ -42,6 +52,7 @@ const PROFILE = {
         "최대한 컴포넌트화를 하여 새로운 경험란이 생겨도 쉽게 추가할 수 있도록 만들었습니다.",
         "현재 페이지 어디에 머물러있는지를 확인할 수 있도록 개발했습니다.",
         "최상단으로 바로 올라갈 수 있도록 '위로 가기' 버튼을 만들었습니다.",
+        "적용해보고 싶은 모든 기능을 실험적으로 만들고 공부하기 위해 이용하고 있기도 합니다.",
       ],
       links: [
         {
@@ -55,14 +66,9 @@ const PROFILE = {
       ],
       stacks: [
         {
-          title: "JavaScript",
+          title: "React",
           content:
-            "함수와 컴포넌트를 통해 활용하여 화면을 동적으로 구성하였습니다. 비동기를 활용하여 MongoDB에서 데이터를 받아 표시하였습니다.",
-        },
-        {
-          title: "HTML/CSS",
-          content:
-            "바닐라 HTML/CSS를 활용하여 사이트를 구성하였습니다. 접근성을 높이기 위해 시맨틱 태그를 활용하였습니다.",
+            "최대한 공통점들을 모아 컴포넌트를 활용하여 어떠한 데이터를 추가하여도 쉽게 할 수 있도록 설계하여 개발했습니다.",
         },
       ],
     },
@@ -259,7 +265,7 @@ const PROFILE = {
           type: "default",
           icon: "➿",
           content:
-            "Java, Javascript, 알고리즘을 학습하고 있으며, 앞으로 Java Spring, Vue.js등 웹 개발에 대해 배웠습니다. 5개월간 주 5일 매일 8시간씩 학습합니다.",
+            "Java, Javascript, 알고리즘을 학습하고 있으며, 앞으로 Java Spring, Vue.js등 웹 개발에 대해 배웠습니다. 5개월간 주 5일 매일 8시간씩 학습했습니다. 취업을 하여 1학기 수료 후 퇴소하였습니다.",
         },
       ],
     },
@@ -292,6 +298,31 @@ const PROFILE = {
           icon: "➿",
           content:
             "모바일 앱 개발 인턴으로 기존 앱 유지 및 보수와 새로운 앱 기획 및 개발을 진행하였습니다.",
+        },
+        {
+          type: "default",
+          icon: "➿",
+          content: "Hip Keeper 앱 유지, 보수",
+        },
+        {
+          type: "default",
+          icon: "➿",
+          content: "Hip Keeper 앱 베타 테스트 사업 관리 ",
+        },
+        {
+          type: "default",
+          icon: "➿",
+          content: "(신) Keeper 앱 기획",
+        },
+        {
+          type: "default",
+          icon: "➿",
+          content: "(신) Keeper 앱 개발",
+        },
+        {
+          type: "default",
+          icon: "➿",
+          content: "회사 홈페이지 Front 수정",
         },
         {
           type: "link",
