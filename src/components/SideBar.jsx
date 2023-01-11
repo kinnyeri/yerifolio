@@ -16,7 +16,7 @@ const SideBarBox = styled.div`
   position: sticky;
   top: 5px;
 
-  font-family: PyeongChangPeace-Bold;
+  font-family: "Sparky Stones";
 
   @media screen and (max-width: 682px) {
     display: none;
@@ -32,8 +32,9 @@ const ContainerBox = styled.div`
   font-size: 30px;
 `;
 const IndexName = styled.a`
+  color: var(--color-back-light);
   &:hover {
-    color: white;
+    color: var(--color-main-dark);
     transition: 0.2s;
   }
 `;
