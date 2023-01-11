@@ -16,7 +16,7 @@ const SideBarBox = styled.div`
   position: sticky;
   top: 5px;
 
-  font-family: PyeongChangPeace-Bold;
+  font-family: "Sparky Stones";
 
   @media screen and (max-width: 682px) {
     display: none;
