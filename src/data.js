@@ -119,7 +119,7 @@ const PROFILE = {
       ],
       links: [
         { link: "https://github.com/GaeBTI/GBTI_FE", title: "Git Hub" },
-        { link: "https://www.gbti.site", title: "배포 사이트" },
+        { link: "https://nostalgic-hypatia-25b94a.netlify.app/", title: "배포 사이트" },
       ],
       stacks: [
         {
