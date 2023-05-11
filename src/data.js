@@ -1,5 +1,5 @@
 const PROFILE = {
-  updatedDate: "2023.01.02",
+  updatedDate: "2023.05.11",
   contact: {
     github: "https://github.com/kinnyeri",
     blog: "https://velog.io/@kinnyeri",
