@@ -4,7 +4,7 @@ import { PROFILE } from "../data";
 
 export const Experience = () => {
   return (
-    <PageWrapper icon="👾" title="Experience">
+    <PageWrapper icon="🦖" title="Experience">
       <ExperienceBox>
         {PROFILE.experiences.map((experience) => (
           <Content key={experience.title} {...experience} />

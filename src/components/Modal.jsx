@@ -3,9 +3,9 @@ import { pdfjs, Document, Page } from "react-pdf";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-export const Modal = ({ handleClick, filePath }) => {
+export const Modal = ({ handleClick, filePath, fileType }) => {
   const modalRef = useRef();
   useEffect(() => {
     document.addEventListener("mousedown", handleModalOutside);
@@ -13,25 +13,38 @@ export const Modal = ({ handleClick, filePath }) => {
       document.removeEventListener("mousedown", handleModalOutside);
     };
   }, []);
-  const handleModalOutside = (e) => {
-    if (!modalRef.current.contains(e.target)) {
-      handleClick();
-    }
-  };
+
+  const handleModalOutside = useCallback(
+    (e) => {
+      if (!modalRef.current.contains(e.target)) {
+        handleClick({ filePath: undefined, fileType: undefined });
+      }
+    },
+    [modalRef, handleClick]
+  );
+
   return (
     <ModalPageBox
       style={{ top: window.scrollY, left: 0 }}
       onClick={(e) => e.stopPropagation()}
     >
       <ModalBox ref={modalRef}>
-        <ModalCancelBtn onClick={() => handleClick()}>
+        <ModalCancelBtn onClick={handleClick}>
           <FontAwesomeIcon icon={faClose} />
         </ModalCancelBtn>
-        <PDFViewer onContextMenu={(e) => e.preventDefault()}>
-          <Document file={filePath}>
-            <Page pageNumber={1} />
-          </Document>
-        </PDFViewer>
+        {fileType === "file" && (
+          <PDFViewer onContextMenu={(e) => e.preventDefault()}>
+            <Document file={filePath}>
+              <Page pageNumber={1} />
+            </Document>
+          </PDFViewer>
+        )}
+        {fileType === "image" && (
+          <img
+            src={filePath}
+            alt="해당 내용과 관련한 이미지 파일이 렌더링되고 있습니다."
+          />
+        )}
       </ModalBox>
     </ModalPageBox>
   );
@@ -51,9 +64,11 @@ const ModalPageBox = styled.div`
 `;
 
 const ModalBox = styled.div`
-  height: 80%;
+  min-height: 50%;
+  max-height: 80%;
   background: white;
   border-radius: 10px;
+  padding: 16px;
   overflow: auto;
   display: grid;
   @media screen and (max-width: 682px) {

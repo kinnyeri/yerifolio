@@ -59,8 +59,8 @@ function App() {
 
 const GlobalStyles = createGlobalStyle`
   html {
-    --color-main: #BCAFD4;
-    --color-main-dark: #6C509F;
+    --color-main: #418B07;
+    --color-main-dark: #326D04;
     --color-back: #efefef;
     --color-back-light: #F9F9F9;
     --color-back-dark: #DCDCDC;

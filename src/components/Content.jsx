@@ -3,11 +3,13 @@ import styled from "styled-components";
 import { Modal, HighLight } from "../components";
 export const Content = ({ title, details }) => {
   const [modal, setModal] = useState(false);
-  const [filePath, setFilePath] = useState("");
-  const handleClick = (file) => {
+  const [modalProps, setModalProps] = useState({ filePath: "", fileType: "" });
+  const handleClick = ({ file, fileType }) => {
     setModal(!modal);
-    setFilePath(file !== undefined ? file : "");
-    console.log(modal, file);
+    setModalProps({
+      filePath: file !== undefined ? file : "",
+      fileType: fileType !== undefined ? fileType : "",
+    });
   };
   return (
     <ContentContainer>
@@ -23,7 +25,7 @@ export const Content = ({ title, details }) => {
                 {
                   link: (
                     <Detail>
-                      <a href={link} target="_blank">
+                      <a href={link} target="_blank" rel="noreferrer">
                         {content}
                       </a>
                     </Detail>
@@ -31,7 +33,18 @@ export const Content = ({ title, details }) => {
                   default: <Detail>{content}</Detail>,
                   file: (
                     <Detail>
-                      <FileButton onClick={() => handleClick(file)}>
+                      <FileButton
+                        onClick={() => handleClick({ file, fileType: "file" })}
+                      >
+                        {content}
+                      </FileButton>
+                    </Detail>
+                  ),
+                  image: (
+                    <Detail>
+                      <FileButton
+                        onClick={() => handleClick({ file, fileType: "image" })}
+                      >
                         {content}
                       </FileButton>
                     </Detail>
@@ -39,7 +52,9 @@ export const Content = ({ title, details }) => {
                   withFile: (
                     <Detail>
                       <span>{content} </span>
-                      <FileButton onClick={() => handleClick(file)}>
+                      <FileButton
+                        onClick={() => handleClick({ file, fileType: "file" })}
+                      >
                         {fileName}
                       </FileButton>
                     </Detail>
@@ -49,7 +64,7 @@ export const Content = ({ title, details }) => {
             </DetailBox>
           </DetailContainer>
         ))}
-        {modal ? <Modal handleClick={handleClick} filePath={filePath} /> : null}
+        {modal ? <Modal handleClick={handleClick} {...modalProps} /> : null}
       </DetailsContainer>
     </ContentContainer>
   );

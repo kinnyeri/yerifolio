@@ -32,8 +32,9 @@ const ContainerBox = styled.div`
   font-size: 30px;
 `;
 const IndexName = styled.a`
+  color: var(--color-back-light);
   &:hover {
-    color: white;
+    color: var(--color-main-dark);
     transition: 0.2s;
   }
 `;

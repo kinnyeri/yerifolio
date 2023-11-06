@@ -23,11 +23,12 @@ export const Profile = () => {
           <span>입니다</span>
         </TitleBox>
         <SubTitleBox>
-          프론트엔드 개발자를 희망하며
+          깊은 고민을 하는 프론트엔드 개발자로서 성장하고 싶으며,
           <br />
-          어려운 난관을 헤쳐가며 얻는 경험과 배움을 좇습니다.
+          어려운 난관을 헤쳐가며 얻는 경험과 배움을 좇아 언제나 도전합니다.
           <br />
-          언제나 도전하는 사람이 되고자 합니다.
+          개발을 통해 무언가를 완성하고, 이를 끊임없이 발전시키는 것이 행복한
+          개발자입니다.
         </SubTitleBox>
         <MoreContentIconBox>
           <FontAwesomeIcon icon={faArrowDown} />
