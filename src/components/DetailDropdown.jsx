@@ -1,24 +1,19 @@
-import styled, { keyframes } from "styled-components";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleChevronDown,
-  faCircleChevronUp,
-} from "@fortawesome/free-solid-svg-icons";
+import styled, { keyframes } from 'styled-components';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleChevronDown, faCircleChevronUp, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 export const DetailDropdown = ({ title, content, size }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
-    setIsOpen(!isOpen);
+    content && setIsOpen(!isOpen);
   };
   return (
     <Container onClick={handleClick}>
       <TitleContainer size={size}>
         <IconBox>
-          <FontAwesomeIcon
-            icon={isOpen ? faCircleChevronUp : faCircleChevronDown}
-          />
+          <FontAwesomeIcon icon={content ? (isOpen ? faCircleChevronUp : faCircleChevronDown) : faArrowCircleRight} />
         </IconBox>
         <TitleBox>{title}</TitleBox>
       </TitleContainer>
@@ -58,8 +53,7 @@ const downAnimation = keyframes`
   }
 `;
 const ContentContainer = styled.div`
-  padding: 0 ${(props) => props.size} ${(props) => props.size}
-    ${(props) => props.size};
+  padding: 0 ${(props) => props.size} ${(props) => props.size} ${(props) => props.size};
   font-size: 1rem;
 
   animation: ${downAnimation} 0.4s ease;
