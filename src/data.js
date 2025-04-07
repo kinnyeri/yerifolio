@@ -1,5 +1,5 @@
 const PROFILE = {
-  updatedDate: '2024.08.31',
+  updatedDate: '2025.04.07',
   contact: {
     github: 'https://github.com/kinnyeri',
     blog: 'https://velog.io/@kinnyeri',
@@ -44,12 +44,14 @@ const PROFILE = {
   projects: [
     {
       title: '🏦 우리은행 NEW WON 앱 구축',
-      subTitle: '우리은행 채널계 모바일 어플리케이션 재구축 프로젝트 참여',
-      time: '2023.10 - 진행 중',
-      team: '부가/혜택 서비스 풀스택 개발자로 참여',
+      subTitle: '우리은행 우리WON뱅킹(App) 전면 재구축 프로젝트 참여',
+      time: '2023.10 - 2025.02',
+      team: '부가/혜택 풀스택 개발자로 참여',
       details: [
-        '우리은행 프론트엔드 개발 시스템에 대한 이해를 바탕으로 개발 진행',
-        '디지털금고, 전담직원, TWO CHAIRS(VIP 서비스), 만보기, 우리아이(부모 서비스) 개발 담당',
+        '디지털금고, 전담직원, TWO CHAIRS(VIP 서비스), 만보기, 우리아이(부모 서비스) 개발',
+        '대출(집단대출), 우리틴틴, 직장인 셀럽 안정화',
+        'Admin 페이지 퍼블리싱 일부 딜리버리 담당',
+        '파트 내 개발 관련 이슈 해결',
       ],
       links: [
         {
@@ -60,14 +62,12 @@ const PROFILE = {
       stacks: [
         {
           title: 'React',
-          content: '',
         },
         {
           title: 'Next.js',
         },
         {
           title: 'TypeScript',
-          content: '',
         },
         {
           title: 'Java',
@@ -81,7 +81,7 @@ const PROFILE = {
       title: 'MOA',
       subTitle: '추억을 담고, 동시에 열어볼 수 있는 디지털 타임캡슐',
       time: '2023.04 - 2024.01',
-      team: 'FE in FE 2명, BE 3명, 디자이너 1명',
+      team: 'FE (FE 2명, BE 3명, 디자이너 1명)',
       details: [
         '"타임캡슐"을 디지털화하여 모두의 추억을 일정 시간동안 담고, 한날 한시에 모여 열어볼 수 있는 시스템을 갖고 있습니다.',
         '타임캡슐 조회 화면을 개발하며 캐러셀을 직접 구현하였고, 중복된 부분을 컴포넌트화 하는 노력을 하고 있습니다.',

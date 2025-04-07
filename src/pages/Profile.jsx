@@ -1,9 +1,9 @@
-import styled, { keyframes } from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { PROFILE } from "../data";
-import { HighLight } from "../components";
+import styled, { keyframes } from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { PROFILE } from '../data';
+import { HighLight } from '../components';
 
 export const Profile = () => {
   return (
@@ -16,7 +16,7 @@ export const Profile = () => {
         <TitleBox>
           문제 해결이
           <br />
-          <span>즐거운</span>{" "}
+          <span>즐거운</span>{' '}
           <HighLight>
             <NameBox>김예리</NameBox>
           </HighLight>
@@ -27,8 +27,7 @@ export const Profile = () => {
           <br />
           어려운 난관을 헤쳐가며 얻는 경험과 배움을 좇아 언제나 도전합니다.
           <br />
-          개발을 통해 무언가를 완성하고, 이를 끊임없이 발전시키는 것이 행복한
-          개발자입니다.
+          개발을 통해 무언가를 완성하고, 이를 끊임없이 발전시키는 것이 행복한 개발자입니다.
         </SubTitleBox>
         <MoreContentIconBox>
           <FontAwesomeIcon icon={faArrowDown} />
